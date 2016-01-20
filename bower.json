@@ -1,0 +1,25 @@
+{
+  "name": "growthd-admin",
+  "version": "1.0.0",
+  "authors": [
+    "Gittitat Sanugul <gittitat77@gmail.com>"
+  ],
+  "keywords": [
+    "Admin",
+    "Template"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}
