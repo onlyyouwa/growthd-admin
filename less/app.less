@@ -1,0 +1,50 @@
+/* 
+	create by @onlyyouwa
+	21/01/2016
+*/
+
+/* Variable */
+@backgroundColor: #efefef;
+@borderColor: #ddd;
+@menuBackgroundDefault: #fff;
+
+/* Mixins */
+.BoxShadow() { box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+.navbar {
+	border: none;
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+header {
+	.BoxShadow();
+	.main-menu {
+		ul {
+			list-style: none;
+			padding-left: 0px;
+			text-align: center;
+			li {
+				a {
+					display: block;
+					padding: 10px 15px;
+				}
+			}
+		}
+	}
+}
+.theme-default {
+	background-color: @backgroundColor;
+	header {
+		> nav {
+			background-color: @menuBackgroundDefault;
+			border-bottom: 1px solid @borderColor;
+		}
+		.main-menu {
+			background-color: @menuBackgroundDefault;
+		}
+	}
+}
