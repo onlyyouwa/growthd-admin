@@ -10,6 +10,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Lato', helvetica, sans-serif;
+  font-weight: 300;
   color: #999;
 }
 .navbar {
@@ -18,6 +19,7 @@ body {
   margin-bottom: 0px;
 }
 a {
+  font-weight: 300;
   color: #aaa;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
@@ -94,7 +96,7 @@ header .nav > li > a .bubble-warning {
 header .nav > li > a .bubble-danger {
   background-color: #e74c3c;
 }
-header .nav > li.has-image a {
+header .nav > li.has-image > a {
   padding: 9px 15px;
 }
 header .nav > li.has-image img {
@@ -104,15 +106,53 @@ header .nav > li.has-image img {
   border-radius: 50%;
 }
 header .dropdown-menu {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #efefef;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 header .dropdown-menu > li > a {
+  font-weight: 300;
   color: #aaa;
-  padding: 5px 20px;
+  padding: 6px 15px;
+}
+header .dropdown-menu > li > span {
+  padding: 3px 15px;
+}
+header .dropdown-menu .divider {
+  background-color: #efefef;
+  margin: 6px 0;
+}
+header .dropdown-menu.dropdown-list {
+  padding: 0px;
+  width: 240px;
+}
+header .dropdown-menu.dropdown-list > li {
+  border-bottom: 1px solid #efefef;
+}
+header .dropdown-menu.dropdown-list > li:last-child {
+  border-width: 0px;
+}
+header .dropdown-menu.dropdown-list > li:last-child a {
+  text-align: center;
+}
+header .dropdown-menu.dropdown-list > li.empty {
+  padding: 6px 15px;
+  text-align: center;
+  color: #ccc;
+}
+header .dropdown-menu.dropdown-list > li > a {
+  padding: 8px 15px;
+}
+header .dropdown-menu.dropdown-list > li > a h5 {
+  margin: 0px 0px 5px;
+}
+header .dropdown-menu.dropdown-list > li > a span {
+  color: #ccc;
+}
+header .dropdown-menu.dropdown-list > li.new a {
+  background-color: #fffbea;
 }
 header .navbar-form {
   margin-top: 6px;
@@ -146,6 +186,11 @@ header .form-control:focus {
 .theme-default header .nav > li > a:hover,
 .theme-default header .nav > li > a:focus,
 .theme-default header .nav > li > a:active {
+  background-color: #3d91c7;
+}
+.theme-default header .nav .open > a,
+.theme-default header .nav .open > a:focus,
+.theme-default header .nav .open > a:hover {
   background-color: #3d91c7;
 }
 .theme-default header .main-menu {

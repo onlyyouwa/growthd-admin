@@ -8,6 +8,7 @@
 @borderColor: #ddd;
 @menuLinkBackground: #f9f9f9;
 @textColor: #999;
+@subTextColor: #ccc;
 
 @primaryColor: #2980b9;
 @successColor: #2ecc71;
@@ -40,6 +41,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', helvetica, sans-serif;
+	font-weight: 300;
 	color: @textColor;
 }
 .navbar {
@@ -48,6 +50,7 @@ html, body {
 	margin-bottom: 0px;
 }
 a {
+	font-weight: 300;
 	color: @linkColorDefault;
 	.Transition();
 	&:hover,
@@ -123,7 +126,7 @@ header {
 			}
 		}
 		&.has-image {
-			a {
+			> a {
 				padding: 9px 15px;
 			}
 			img {
@@ -135,12 +138,54 @@ header {
 		}
 	}
 	.dropdown-menu {
-		border: 1px solid rgba(0,0,0,.05);
+		border: 1px solid #efefef;
 		.BoxShadow();
 		.BorderRadius(3px);
-		> li > a {
-			color: @linkColorDefault;
-			padding: 5px 20px;
+		> li {
+			> a {
+				font-weight: 300;
+				color: @linkColorDefault;
+				padding: 6px 15px;
+			}
+			> span {
+				padding: 3px 15px;
+			}
+		}
+		.divider {
+			background-color: #efefef;
+			margin: 6px 0;
+		}
+		&.dropdown-list {
+			padding: 0px;
+			width: 240px;
+			> li {
+				border-bottom: 1px solid #efefef;
+				&:last-child {
+					border-width: 0px;
+					a {
+						text-align: center;
+					}
+				}
+				&.empty {
+					padding: 6px 15px;
+					text-align: center;
+					color: @subTextColor;
+				}
+				> a {
+					padding: 8px 15px;
+					h5 {
+						margin: 0px 0px 5px;
+					}
+					span {
+						color: @subTextColor;
+					}
+				}
+				&.new {
+					a {
+						background-color: #fffbea;
+					}
+				}
+			}
 		}
 	}
 	.navbar-form {
@@ -175,6 +220,11 @@ header {
 			&:active {
 				background-color: @navDarkColor;
 			}
+		}
+		.nav .open > a, 
+		.nav .open > a:focus,
+		.nav .open > a:hover {
+			background-color: @navDarkColor;
 		}
 		.main-menu {
 			background-color: #fff;
