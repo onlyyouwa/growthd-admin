@@ -2,8 +2,160 @@
 	create by @onlyyouwa
 	21/01/2016
 */
-
-html, body {
-	height: 100%;
-	width: 100%;
+/* Variable */
+/* Theme */
+/* Mixins */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', helvetica, sans-serif;
+  color: #999;
+}
+.navbar {
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+a {
+  color: #aaa;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  transition: all .25s;
+}
+a:hover,
+a:focus,
+a:focus {
+  text-decoration: none;
+}
+header {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+header .main-menu {
+  height: 76px;
+}
+header .main-menu > ul {
+  list-style: none;
+  padding-left: 0px;
+  text-align: center;
+}
+header .main-menu > ul > li {
+  display: inline-block;
+  margin-right: 6px;
+}
+header .main-menu > ul > li > a {
+  display: block;
+  padding: 10px 15px 7px;
+}
+header .main-menu > ul > li > a div i {
+  font-size: 36px;
+  line-height: 32px;
+}
+header .main-menu > ul > li:last-child {
+  margin-right: 0px;
+}
+header .navbar {
+  min-height: 40px;
+}
+header .navbar-brand {
+  height: 40px;
+  padding: 10px 15px;
+}
+header .nav > li > a {
+  padding: 10px 15px;
+}
+header .nav > li > a .bubble {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 8px;
+  line-height: 8px;
+}
+header .nav > li > a .bubble.bubble-noitem {
+  top: 12px;
+  right: 12px;
+}
+header .nav > li > a .bubble-primary {
+  background-color: #2980b9;
+}
+header .nav > li > a .bubble-info {
+  background-color: #3498db;
+}
+header .nav > li > a .bubble-success {
+  background-color: #2ecc71;
+}
+header .nav > li > a .bubble-warning {
+  background-color: #f1c40f;
+}
+header .nav > li > a .bubble-danger {
+  background-color: #e74c3c;
+}
+header .nav > li.has-image a {
+  padding: 9px 15px;
+}
+header .nav > li.has-image img {
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+  border-radius: 50%;
+}
+header .dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+header .dropdown-menu > li > a {
+  color: #aaa;
+  padding: 5px 20px;
+}
+header .navbar-form {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+header .form-control {
+  height: 28px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+}
+header .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.theme-default {
+  background-color: #efefef;
+}
+.theme-default header > nav {
+  background-color: #50a8e1;
+  /* border-bottom: 1px solid @borderColor; */
+}
+.theme-default header .navbar-brand {
+  color: #fff;
+}
+.theme-default header .nav > li > a {
+  color: #fff;
+}
+.theme-default header .nav > li > a:hover,
+.theme-default header .nav > li > a:focus,
+.theme-default header .nav > li > a:active {
+  background-color: #3d91c7;
+}
+.theme-default header .main-menu {
+  background-color: #fff;
+}
+.theme-default header .main-menu > ul > li > a:hover,
+.theme-default header .main-menu > ul > li > a:focus,
+.theme-default header .main-menu > ul > li > a.active,
+.theme-default header .main-menu > ul > li > a:active {
+  color: #aaa;
+  background-color: #f9f9f9;
+  border-bottom: 3px solid #50a8e1;
 }

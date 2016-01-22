@@ -7,6 +7,7 @@
 @backgroundColor: #efefef;
 @borderColor: #ddd;
 @menuLinkBackground: #f9f9f9;
+@textColor: #999;
 
 @primaryColor: #2980b9;
 @successColor: #2ecc71;
@@ -39,6 +40,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', helvetica, sans-serif;
+	color: @textColor;
 }
 .navbar {
 	border: none;
@@ -86,37 +88,73 @@ header {
 	}
 	.navbar-brand {
 		height: 40px;
-	}
-	.navbar-brand,
-	.nav > li > a {
 		padding: 10px 15px;
-		.bubble {
-			position: absolute;
-			top: 6px;
-			right: 10px;
-			.BorderRadius(3px);
-			padding: 3px;
-			font-size: 8px;
-			line-height: 8px;
-			&.bubble-noitem {
-				top: 12px;
-				right: 12px;
+	}
+	.nav > li {
+		> a {
+			padding: 10px 15px;
+			.bubble {
+				position: absolute;
+				top: 6px;
+				right: 10px;
+				.BorderRadius(3px);
+				padding: 3px;
+				font-size: 8px;
+				line-height: 8px;
+				&.bubble-noitem {
+					top: 12px;
+					right: 12px;
+				}
+			}
+			.bubble-primary {
+				background-color: @primaryColor;
+			}
+			.bubble-info {
+				background-color: @infoColor;
+			}
+			.bubble-success {
+				background-color: @successColor;
+			}
+			.bubble-warning {
+				background-color: @warningColor;
+			}
+			.bubble-danger {
+				background-color: @dangerColor;
 			}
 		}
-		.bubble-primary {
-			background-color: @primaryColor;
+		&.has-image {
+			a {
+				padding: 9px 15px;
+			}
+			img {
+				width: 22px;
+				height: 22px;
+				margin-right: 3px;
+				border-radius: 50%;
+			}	
 		}
-		.bubble-info {
-			background-color: @infoColor;
+	}
+	.dropdown-menu {
+		border: 1px solid rgba(0,0,0,.05);
+		.BoxShadow();
+		.BorderRadius(3px);
+		> li > a {
+			color: @linkColorDefault;
+			padding: 5px 20px;
 		}
-		.bubble-success {
-			background-color: @successColor;
-		}
-		.bubble-warning {
-			background-color: @warningColor;
-		}
-		.bubble-danger {
-			background-color: @dangerColor;
+	}
+	.navbar-form {
+		margin-top: 6px;
+		margin-bottom: 6px;
+	}
+	.form-control {
+		height: 28px;
+		.BorderRadius(3px);
+		box-shadow: none;
+		border: none;
+		&:focus {
+			outline: none;
+			box-shadow: none;
 		}
 	}
 }
@@ -148,15 +186,6 @@ header {
 					color: @linkColorDefault;
 					background-color: @menuLinkBackground;
 					border-bottom: 3px solid @navColor;
-				}
-			}
-			.dropdown-menu {
-				border: 1px solid rgba(0,0,0,.05);
-				-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
-				-moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
-				box-shadow: 0 1px 1px rgba(0,0,0,.1);
-				> li > a {
-					color: @linkColorDefault;
 				}
 			}
 		}
