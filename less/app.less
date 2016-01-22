@@ -6,33 +6,117 @@
 /* Variable */
 @backgroundColor: #efefef;
 @borderColor: #ddd;
+@menuLinkBackground: #f9f9f9;
+
+@primaryColor: #2980b9;
+@successColor: #2ecc71;
+@infoColor: #3498db;
+@warningColor: #f1c40f;
+@dangerColor: #e74c3c;
+
+/* Theme */
 @menuBackgroundDefault: #fff;
+@linkColorDefault: #aaa;
+@navColor: #50a8e1;
+@navDarkColor: #3d91c7;
+@navLinkColor: #fff;
+@linkColor: #50a8e1;
 
 /* Mixins */
 .BoxShadow() { box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+.Transition() {
+	-webkit-transition: all .25s;
+	-moz-transition: all .25s;
+	transition: all .25s;
+}
+.BorderRadius(@px) {
+	-webkit-border-radius: @px;
+	-moz-border-radius: @px;
+	border-radius: @px;
+}
 
 html, body {
 	height: 100%;
 	width: 100%;
+	font-family: 'Lato', helvetica, sans-serif;
 }
 .navbar {
 	border: none;
 	border-radius: 0px;
 	margin-bottom: 0px;
 }
+a {
+	color: @linkColorDefault;
+	.Transition();
+	&:hover,
+	&:focus,
+	&:focus {
+		text-decoration: none;
+	}
+}
 header {
 	.BoxShadow();
 	.main-menu {
-		ul {
+		height: 76px;
+		> ul {
 			list-style: none;
 			padding-left: 0px;
 			text-align: center;
-			li {
-				a {
+			> li {
+				display: inline-block;
+				margin-right: 6px;
+				> a {
 					display: block;
-					padding: 10px 15px;
+					padding: 10px 15px 7px;
+					div {
+						i {
+							font-size: 36px;
+							line-height: 32px;
+						}
+					}
+				}
+				&:last-child {
+					margin-right: 0px;
 				}
 			}
+		}
+	}
+	.navbar {
+		min-height: 40px;
+	}
+	.navbar-brand {
+		height: 40px;
+	}
+	.navbar-brand,
+	.nav > li > a {
+		padding: 10px 15px;
+		.bubble {
+			position: absolute;
+			top: 6px;
+			right: 10px;
+			.BorderRadius(3px);
+			padding: 3px;
+			font-size: 8px;
+			line-height: 8px;
+			&.bubble-noitem {
+				top: 12px;
+				right: 12px;
+			}
+		}
+		.bubble-primary {
+			background-color: @primaryColor;
+		}
+		.bubble-info {
+			background-color: @infoColor;
+		}
+		.bubble-success {
+			background-color: @successColor;
+		}
+		.bubble-warning {
+			background-color: @warningColor;
+		}
+		.bubble-danger {
+			background-color: @dangerColor;
 		}
 	}
 }
@@ -40,11 +124,41 @@ header {
 	background-color: @backgroundColor;
 	header {
 		> nav {
-			background-color: @menuBackgroundDefault;
-			border-bottom: 1px solid @borderColor;
+			background-color: @navColor;
+			/* border-bottom: 1px solid @borderColor; */
+		}
+		.navbar-brand {
+			color: @navLinkColor;
+		}
+		.nav > li > a {
+			color: @navLinkColor;
+			&:hover, 
+			&:focus,
+			&:active {
+				background-color: @navDarkColor;
+			}
 		}
 		.main-menu {
-			background-color: @menuBackgroundDefault;
+			background-color: #fff;
+			> ul > li > a {
+				&:hover,
+				&:focus,
+				&.active,
+				&:active {
+					color: @linkColorDefault;
+					background-color: @menuLinkBackground;
+					border-bottom: 3px solid @navColor;
+				}
+			}
+			.dropdown-menu {
+				border: 1px solid rgba(0,0,0,.05);
+				-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+				-moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+				box-shadow: 0 1px 1px rgba(0,0,0,.1);
+				> li > a {
+					color: @linkColorDefault;
+				}
+			}
 		}
 	}
 }
