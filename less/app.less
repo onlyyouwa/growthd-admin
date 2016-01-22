@@ -10,13 +10,19 @@
 @textColor: #999;
 @subTextColor: #ccc;
 
-@primaryColor: #2980b9;
+@primaryColor: #3498db;
 @successColor: #2ecc71;
-@infoColor: #3498db;
+@infoColor: #00bcd4;
 @warningColor: #f1c40f;
 @dangerColor: #e74c3c;
+@darkPrimaryColor: #2980b9;
+@darkSuccessColor: #27ae60;
+@darkInfoColor: #02aabf;
+@darkWarningColor: #f39c12;
+@darkDangerColor: #c0392b;
 
 /* Theme */
+@mainColor: #50a8e1;
 @menuBackgroundDefault: #fff;
 @linkColorDefault: #aaa;
 @navColor: #50a8e1;
@@ -41,8 +47,13 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Lato', helvetica, sans-serif;
+	font-size: 16px;
 	font-weight: 300;
 	color: @textColor;
+}
+.page-login {
+	height: auto;
+	background-color: @backgroundColor;
 }
 .navbar {
 	border: none;
@@ -59,7 +70,100 @@ a {
 		text-decoration: none;
 	}
 }
+.color-blue {
+	color: @mainColor;
+}
+.center {
+	text-align: center;
+}
+.box {
+	padding: 15px 20px;
+	background-color: #fff;
+	.BoxShadow();
+	&.box-stats {
+		padding: 25px 20px;
+		text-align: center;
+		h2 {
+			font-size: 36px;
+			font-weight: 300;
+			margin-top: 0px;
+			margin-bottom: 10px;
+			i {
+				color: @mainColor;
+				font-size: 42px;
+				line-height: 36px;
+			}
+		}
+		span {
+			color: @subTextColor;
+		}
+	}
+	&.box-login {
+		width: 360px;
+		margin: 7% auto;
+		.box-header {
+			h3 {
+				text-align: center;
+			}
+		}
+	}
+}
+label {
+	font-weight: 400;
+}
+/* Button */
+.btn {
+	padding: 8px 25px;
+	.BorderRadius(3px);
+	border: none;
+	&.btn-primary {
+		background-color: @primaryColor;
+		&:hover,
+		&:focus {
+			background-color: @darkPrimaryColor;
+		}
+	}
+	&.btn-success {
+		background-color: @successColor;
+	}
+	&.btn-info {
+		background-color: @infoColor;
+	}
+	&.btn-warning {
+		background-color: @warningColor;
+	}
+	&.btn-danger {
+		background-color: @dangerColor;
+	}
+}
+/* Form */
+.form-control {
+	.BorderRadius(3px);
+	box-shadow: none;
+	&:focus {
+		border-color: @navColor;
+		box-shadow: none;
+	}
+}
+/* Error */
+.err {
+	text-align: center;
+	margin: 7% auto;
+	h1,
+	h2 {
+		font-weight: 300;
+		color: @subTextColor;
+	}
+	h1 {
+		font-size: 96px;
+	}
+	h2 {
+		font-size: 48px;
+	}
+}
+/* Navbar & Header */
 header {
+	margin-bottom: 25px;
 	.BoxShadow();
 	.main-menu {
 		height: 76px;
@@ -203,12 +307,12 @@ header {
 		}
 	}
 }
+/* Theme */
 .theme-default {
 	background-color: @backgroundColor;
 	header {
 		> nav {
-			background-color: @navColor;
-			/* border-bottom: 1px solid @borderColor; */
+			background-color: @navColor;		
 		}
 		.navbar-brand {
 			color: @navLinkColor;

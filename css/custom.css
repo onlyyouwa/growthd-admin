@@ -10,8 +10,13 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Lato', helvetica, sans-serif;
+  font-size: 16px;
   font-weight: 300;
   color: #999;
+}
+.page-login {
+  height: auto;
+  background-color: #efefef;
 }
 .navbar {
   border: none;
@@ -30,7 +35,102 @@ a:focus,
 a:focus {
   text-decoration: none;
 }
+.color-blue {
+  color: #50a8e1;
+}
+.center {
+  text-align: center;
+}
+.box {
+  padding: 15px 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.box.box-stats {
+  padding: 25px 20px;
+  text-align: center;
+}
+.box.box-stats h2 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.box.box-stats h2 i {
+  color: #50a8e1;
+  font-size: 42px;
+  line-height: 36px;
+}
+.box.box-stats span {
+  color: #ccc;
+}
+.box.box-login {
+  width: 360px;
+  margin: 7% auto;
+}
+.box.box-login .box-header h3 {
+  text-align: center;
+}
+label {
+  font-weight: 400;
+}
+/* Button */
+.btn {
+  padding: 8px 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+}
+.btn.btn-primary {
+  background-color: #3498db;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background-color: #2980b9;
+}
+.btn.btn-success {
+  background-color: #2ecc71;
+}
+.btn.btn-info {
+  background-color: #00bcd4;
+}
+.btn.btn-warning {
+  background-color: #f1c40f;
+}
+.btn.btn-danger {
+  background-color: #e74c3c;
+}
+/* Form */
+.form-control {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #50a8e1;
+  box-shadow: none;
+}
+/* Error */
+.err {
+  text-align: center;
+  margin: 7% auto;
+}
+.err h1,
+.err h2 {
+  font-weight: 300;
+  color: #ccc;
+}
+.err h1 {
+  font-size: 96px;
+}
+.err h2 {
+  font-size: 48px;
+}
+/* Navbar & Header */
 header {
+  margin-bottom: 25px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 header .main-menu {
@@ -82,10 +182,10 @@ header .nav > li > a .bubble.bubble-noitem {
   right: 12px;
 }
 header .nav > li > a .bubble-primary {
-  background-color: #2980b9;
+  background-color: #3498db;
 }
 header .nav > li > a .bubble-info {
-  background-color: #3498db;
+  background-color: #00bcd4;
 }
 header .nav > li > a .bubble-success {
   background-color: #2ecc71;
@@ -170,12 +270,12 @@ header .form-control:focus {
   outline: none;
   box-shadow: none;
 }
+/* Theme */
 .theme-default {
   background-color: #efefef;
 }
 .theme-default header > nav {
   background-color: #50a8e1;
-  /* border-bottom: 1px solid @borderColor; */
 }
 .theme-default header .navbar-brand {
   color: #fff;
