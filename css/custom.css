@@ -145,20 +145,33 @@ ul.color-set > li div {
   text-align: center;
 }
 .box .box-header {
-  padding: 10px 20px;
+  padding: 10px 15px;
+  position: relative;
 }
 .box .box-header h1,
 .box .box-header h2,
 .box .box-header h3,
 .box .box-header h4 {
+  display: inline-block;
   margin: 0px;
 }
+.box .box-header nav {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
 .box .box-body {
-  padding: 15px 20px;
+  padding: 15px;
   border-top: 1px solid #ddd;
 }
+.box .box-body.no-pad {
+  padding: 0px;
+}
+.box .box-body.no-pad table {
+  margin-bottom: 0px;
+}
 .box .box-footer {
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-top: 1px solid #ddd;
 }
 .box .box-header:before,
@@ -351,6 +364,38 @@ textarea {
 }
 .breadcrumb > li + li:before {
   content: ">";
+}
+/* Table & Pagination */
+table > thead th {
+  color: #50a8e1;
+}
+.pagination {
+  margin: 0px;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #50a8e1;
+  padding: 3px 8px;
+  font-size: 14px;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #50a8e1;
+  border-color: #50a8e1;
 }
 /* Navbar & Header */
 .navbar {
