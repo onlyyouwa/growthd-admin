@@ -339,6 +339,19 @@ textarea {
 .err h2 {
   font-size: 48px;
 }
+/* Content */
+.content-header {
+  position: relative;
+}
+.content-header ol {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  background: transparent;
+}
+.breadcrumb > li + li:before {
+  content: ">";
+}
 /* Navbar & Header */
 .navbar {
   border: none;
