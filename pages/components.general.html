@@ -169,22 +169,71 @@
 	<!-- Main Content -->
 	<div class="main-content container">
 
-		<h2>Color</h2>
+		<h2>Colors</h2>
 		<!-- row -->
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="box">
 					<div class="box-header">
-						<h4>Color sets</h4>
+						<h4>Colors set</h4>
 					</div>
 					<div class="box-content">
 						<ul class="color-set">
-							<li>#2ecc71</li><!-- remove space -> prevent inline list error width
-							--><li>#00bcd4</li><!--
-							--><li>#3498db</li><!--
-							--><li>#f1c40f</li><!--
-							--><li>#e74c3c</li>
+							<li><div style="background-color: #3498db">#3498db<br>Primary Color</div><div style="background-color: #2980b9">#2980b9<br>Dark Primary Color</div></li><!--
+							--><li><div style="background-color: #00bcd4">#00bcd4<br>Info Color</div><div style="background-color: #02aabf">#02aabf<br>Dark Info Color</div></li><!--
+							--><li><div style="background-color: #2ecc71">#2ecc71<br>Success Color</div><div style="background-color: #27ae60">#27ae60<br>Dark Success Color</div></li><!-- remove space -> prevent inline list error width
+							--><li><div style="background-color: #f1c40f">#f1c40f<br>Warning Color</div><div style="background-color: #f39c12">#f39c12<br>Dark Warning Color</div></li><!--
+							--><li><div style="background-color: #e74c3c">#e74c3c<br>Danger Color</div><div style="background-color: #c0392b">#c0392b<br>Dark Danger Color</div></li>
 						</ul>
+						Some flat colors from here >> <a href="http://flatuicolors.com/" rel="no-follow">Flatuicolors.com</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<h2>Alerts & Progress bars</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Alerts</h4>
+					</div>
+					<div class="box-content">
+						<div class="alert alert-success alert-dismissible" role="alert">Success!! You're doing great. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-info alert-dismissible" role="alert">Hello!! How're you today? <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-warning alert-dismissible" role="alert">Warning!! You're in dangerous area. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-danger alert-dismissible" role="alert">Whoops!! Something went wrong. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Progress bars</h4>
+					</div>
+					<div class="box-content">
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+								<span class="sr-only">40% Complete (success)</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+								<span class="sr-only">20% Complete</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+								<span class="sr-only">60% Complete (warning)</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								<span class="sr-only">80% Complete (danger)</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

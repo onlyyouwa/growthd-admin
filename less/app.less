@@ -43,6 +43,7 @@
 	border-radius: @px;
 }
 
+/* Html, Body */
 html, body {
 	height: 100%;
 	width: 100%;
@@ -55,14 +56,21 @@ html, body {
 	height: auto;
 	background-color: @backgroundColor;
 }
-.navbar {
-	border: none;
-	border-radius: 0px;
-	margin-bottom: 0px;
+
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
 }
+
+/* Link */
 a {
 	font-weight: 300;
-	color: @linkColorDefault;
+	color: @linkColor;
 	.Transition();
 	&:hover,
 	&:focus,
@@ -70,15 +78,80 @@ a {
 		text-decoration: none;
 	}
 }
+
+/* Color */
 .color-blue {
 	color: @mainColor;
 }
+
+/* Label */
+label {
+	font-weight: 400;
+}
+
+/* Alignment */
 .center {
 	text-align: center;
 }
+
+/* List */
+ul {
+	padding-left: 30px;
+	&.color-set {
+		list-style: none;
+		padding-left: 0px;
+		> li {
+			display: inline-block;
+			width: 20%;
+			div {
+				padding: 20px 0px;
+				text-align: center;
+				color: #fff;
+			}
+		}
+	}
+}
+
+/* Alert */
+.alert {
+	.BorderRadius(3px);
+	border: none;
+	color: #fff;
+}
+.alert-success {
+	background-color: @successColor;
+}
+.alert-info {
+	background-color: @infoColor;
+}
+.alert-warning {
+	background-color: @warningColor;
+}
+.alert-danger {
+	background-color: @dangerColor;
+}
+
+/* Progress bars */
+.progress {
+	.BorderRadius(3px);
+}
+.progress-bar-success {
+	background-color: @successColor;
+}
+.progress-bar-info {
+	background-color: @infoColor;
+}
+.progress-bar-warning {
+	background-color: @warningColor;
+}
+.progress-bar-danger {
+	background-color: @dangerColor;
+}
+
+/* Box */
 .box {
-	padding: 15px 20px;
 	background-color: #fff;
+	margin-bottom: 20px;
 	.BoxShadow();
 	&.box-stats {
 		padding: 25px 20px;
@@ -101,16 +174,25 @@ a {
 	&.box-login {
 		width: 360px;
 		margin: 7% auto;
+		/*padding: 15px 20px;*/
 		.box-header {
 			h3 {
 				text-align: center;
 			}
 		}
 	}
+	.box-header {
+		padding: 10px 20px;
+		h1, h2, h3, h4 {
+			margin: 0px;
+		}
+	}
+	.box-content {
+		padding: 15px 20px;
+		border-top: 1px solid @borderColor;
+	}
 }
-label {
-	font-weight: 400;
-}
+
 /* Button */
 .btn {
 	padding: 8px 25px;
@@ -136,6 +218,7 @@ label {
 		background-color: @dangerColor;
 	}
 }
+
 /* Form */
 .form-control {
 	.BorderRadius(3px);
@@ -145,6 +228,7 @@ label {
 		box-shadow: none;
 	}
 }
+
 /* Error */
 .err {
 	text-align: center;
@@ -161,7 +245,13 @@ label {
 		font-size: 48px;
 	}
 }
+
 /* Navbar & Header */
+.navbar {
+	border: none;
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
 header {
 	margin-bottom: 25px;
 	.BoxShadow();
@@ -177,6 +267,7 @@ header {
 				> a {
 					display: block;
 					padding: 10px 15px 7px;
+					color: @linkColorDefault;
 					div {
 						i {
 							font-size: 36px;
@@ -307,6 +398,7 @@ header {
 		}
 	}
 }
+
 /* Theme */
 .theme-default {
 	background-color: @backgroundColor;

@@ -5,6 +5,7 @@
 /* Variable */
 /* Theme */
 /* Mixins */
+/* Html, Body */
 html,
 body {
   height: 100%;
@@ -18,14 +19,19 @@ body {
   height: auto;
   background-color: #efefef;
 }
-.navbar {
-  border: none;
-  border-radius: 0px;
-  margin-bottom: 0px;
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
+/* Link */
 a {
   font-weight: 300;
-  color: #aaa;
+  color: #50a8e1;
   -webkit-transition: all .25s;
   -moz-transition: all .25s;
   transition: all .25s;
@@ -35,15 +41,77 @@ a:focus,
 a:focus {
   text-decoration: none;
 }
+/* Color */
 .color-blue {
   color: #50a8e1;
 }
+/* Label */
+label {
+  font-weight: 400;
+}
+/* Alignment */
 .center {
   text-align: center;
 }
+/* List */
+ul {
+  padding-left: 30px;
+}
+ul.color-set {
+  list-style: none;
+  padding-left: 0px;
+}
+ul.color-set > li {
+  display: inline-block;
+  width: 20%;
+}
+ul.color-set > li div {
+  padding: 20px 0px;
+  text-align: center;
+  color: #fff;
+}
+/* Alert */
+.alert {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+}
+.alert-success {
+  background-color: #2ecc71;
+}
+.alert-info {
+  background-color: #00bcd4;
+}
+.alert-warning {
+  background-color: #f1c40f;
+}
+.alert-danger {
+  background-color: #e74c3c;
+}
+/* Progress bars */
+.progress {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.progress-bar-success {
+  background-color: #2ecc71;
+}
+.progress-bar-info {
+  background-color: #00bcd4;
+}
+.progress-bar-warning {
+  background-color: #f1c40f;
+}
+.progress-bar-danger {
+  background-color: #e74c3c;
+}
+/* Box */
 .box {
-  padding: 15px 20px;
   background-color: #fff;
+  margin-bottom: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .box.box-stats {
@@ -67,12 +135,23 @@ a:focus {
 .box.box-login {
   width: 360px;
   margin: 7% auto;
+  /*padding: 15px 20px;*/
 }
 .box.box-login .box-header h3 {
   text-align: center;
 }
-label {
-  font-weight: 400;
+.box .box-header {
+  padding: 10px 20px;
+}
+.box .box-header h1,
+.box .box-header h2,
+.box .box-header h3,
+.box .box-header h4 {
+  margin: 0px;
+}
+.box .box-content {
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
 }
 /* Button */
 .btn {
@@ -129,6 +208,11 @@ label {
   font-size: 48px;
 }
 /* Navbar & Header */
+.navbar {
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
 header {
   margin-bottom: 25px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -148,6 +232,7 @@ header .main-menu > ul > li {
 header .main-menu > ul > li > a {
   display: block;
   padding: 10px 15px 7px;
+  color: #aaa;
 }
 header .main-menu > ul > li > a div i {
   font-size: 36px;
