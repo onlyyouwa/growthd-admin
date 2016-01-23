@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Growthd Admin v1</title>
+
+	<!-- Utf-8 Chartset -->
+	<meta charset="utf-8">
+
+	<!-- Responsive layout -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Import Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Style -->	
+	<link rel="stylesheet" type="text/css" href="../libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/Ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+
+</head>
+<body class="theme-default">
+
+	<header>
+		<!-- Top Navbar -->
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-toggle" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">G-Admin v1</a>
+				</div>
+
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell-o"></i>
+								<span class="bubble bubble-danger">2</span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="new">
+									<a href="#">
+										<h5>Notification #1</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li class="new">
+									<a href="#">
+										<h5>Notification #2</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #3</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #4</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Show all notifications
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope-o"></i>
+								<span class="bubble bubble-warning bubble-noitem"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="empty">
+									No new messages
+								</li>
+								<li>
+									<a href="#">
+										Show all messages
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown has-image">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../img/default-user.png" alt=""> Admin<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Setting</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Log out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling
+				<div class="collapse navbar-collapse" id="navbar-toggle">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+				</div> /.navbar-collapse --> 
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- Main Menu -->
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="#">
+						<div><i class="ion-ios-speedometer-outline"></i></div>
+						Dashboard
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-photos-outline"></i></div>
+						Pages <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Blank</a></li>
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Register</a></li>
+						<li><a href="#">404 Error</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-monitor-outline"></i></div>
+						Components <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">General</a></li>
+						<li><a href="#">Buttons</a></li>
+						<li><a href="#">Icons</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<div><i class="ion-ios-compose-outline"></i></div>
+						Forms
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-grid-view-outline"></i></div>
+						Tables <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Normal tables</a></li>
+						<li><a href="#">Data tables</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- End Main Menu -->
+	</header>
+
+	<!-- Main Content -->
+	<div class="main-content container">
+
+		<h2 class="color-blue">Buttons</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">
+						<h4>Buttons</h4>
+					</div>
+					<div class="box-content">
+						<div class="mgb">
+							Extra small size<br>
+							<button class="btn btn-default btn-xs">Primary button</button>
+							<button class="btn btn-primary btn-xs">Primary button</button>
+							<button class="btn btn-info btn-xs">Primary button</button>
+							<button class="btn btn-success btn-xs">Primary button</button>
+							<button class="btn btn-warning btn-xs">Primary button</button>
+							<button class="btn btn-danger btn-xs">Primary button</button>
+						</div>
+						<div class="mgb">
+							Small size<br>
+							<button class="btn btn-default btn-sm">Primary button</button>
+							<button class="btn btn-primary btn-sm">Primary button</button>
+							<button class="btn btn-info btn-sm">Primary button</button>
+							<button class="btn btn-success btn-sm">Primary button</button>
+							<button class="btn btn-warning btn-sm">Primary button</button>
+							<button class="btn btn-danger btn-sm">Primary button</button>
+						</div>
+						<div class="mgb">
+							Normal size<br>
+							<button class="btn btn-default">Primary button</button>
+							<button class="btn btn-primary">Primary button</button>
+							<button class="btn btn-info">Primary button</button>
+							<button class="btn btn-success">Primary button</button>
+							<button class="btn btn-warning">Primary button</button>
+							<button class="btn btn-danger">Primary button</button>
+						</div>
+						<div class="mgb">
+							Large size<br>
+							<button class="btn btn-default btn-lg">Primary button</button>
+							<button class="btn btn-primary btn-lg">Primary button</button>
+							<button class="btn btn-info btn-lg">Primary button</button>
+							<button class="btn btn-success btn-lg">Primary button</button>
+							<button class="btn btn-warning btn-lg">Primary button</button>
+							<button class="btn btn-danger btn-lg">Primary button</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<h2 class="color-blue">Button groups & dropdowns</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Button groups</h4>
+					</div>
+					<div class="box-content">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">Left</button>
+							<button type="button" class="btn btn-default">Middle</button>
+							<button type="button" class="btn btn-default">Right</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Button dropdowns</h4>
+					</div>
+					<div class="box-content">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">1</button>
+							<button type="button" class="btn btn-default">2</button>
+
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Dropdown
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dropdown link</a></li>
+									<li><a href="#">Dropdown link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+	</div>
+	<!-- End Main Content -->
+
+	<!-- Script -->
+	<script type="text/javascript" src="../libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>
