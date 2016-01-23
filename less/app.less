@@ -192,7 +192,7 @@ ul {
 			margin: 0px;
 		}
 	}
-	.box-content {
+	.box-body {
 		padding: 15px 20px;
 		border-top: 1px solid @borderColor;
 	}
@@ -200,11 +200,24 @@ ul {
 		padding: 10px 20px;
 		border-top: 1px solid @borderColor;
 	}
+	.box-header:before,
+	.box-body:before,
+	.box-footer:before,
+	.box-header:after,
+	.box-body:after,
+	.box-footer:after {
+		content: " ";
+		display: table;
+	}
+	/* Clear Float */
+	.box-header:after, .box-body:after, .box-footer:after {
+		clear: both;
+	}
 }
 
 /* Button */
 .btn {
-	padding: 8px 25px;
+	padding: 6px 20px;
 	.BorderRadius(3px);
 	border: none;
 	&:focus,
@@ -284,6 +297,54 @@ ul {
 		box-shadow: none;
 	}
 }
+textarea {
+	resize: none;
+}
+.has-success .checkbox, .has-success .checkbox-inline,
+.has-success .control-label, .has-success .help-block,
+.has-success .radio, .has-success .radio-inline,
+.has-success.checkbox label, .has-success.checkbox-inline label,
+.has-success.radio label, .has-success.radio-inline label {
+	color: @darkSuccessColor;
+}
+.has-success .form-control {
+    border-color: @successColor;
+    box-shadow: none;
+    &:focus {
+    	border-color: @darkSuccessColor;
+    	box-shadow: none;
+    }
+}
+.has-warning .checkbox, .has-warning .checkbox-inline,
+.has-warning .control-label, .has-warning .help-block,
+.has-warning .radio, .has-warning .radio-inline,
+.has-warning.checkbox label, .has-warning.checkbox-inline label,
+.has-warning.radio label, .has-warning.radio-inline label {
+	color: @darkWarningColor;
+}
+.has-warning .form-control {
+    border-color: @warningColor !important;
+    box-shadow: none;
+    &:focus {
+    	border-color: @darkWarningColor !important;
+    	box-shadow: none;
+    }
+}
+.has-error .checkbox, .has-error .checkbox-inline,
+.has-error .control-label, .has-error .help-block,
+.has-error .radio, .has-error .radio-inline,
+.has-error.checkbox label, .has-error.checkbox-inline label,
+.has-error.radio label, .has-error.radio-inline label {
+	color: @darkDangerColor;
+}
+.has-error .form-control {
+    border-color: @dangerColor !important;
+    box-shadow: none;
+    &:focus {
+    	border-color: @darkDangerColor !important;
+    	box-shadow: none;
+    }
+}
 
 /* Error */
 .err {
@@ -312,7 +373,6 @@ header {
 	margin-bottom: 25px;
 	.BoxShadow();
 	.main-menu {
-		height: 76px;
 		> ul {
 			list-style: none;
 			padding-left: 0px;
@@ -324,6 +384,7 @@ header {
 					display: block;
 					padding: 10px 15px 7px;
 					color: @linkColorDefault;
+					height: 76px;
 					div {
 						i {
 							font-size: 36px;

@@ -116,6 +116,7 @@ ul.color-set > li div {
   background-color: #fff;
   margin-bottom: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  /* Clear Float */
 }
 .box.box-stats {
   padding: 25px 20px;
@@ -152,7 +153,7 @@ ul.color-set > li div {
 .box .box-header h4 {
   margin: 0px;
 }
-.box .box-content {
+.box .box-body {
   padding: 15px 20px;
   border-top: 1px solid #ddd;
 }
@@ -160,9 +161,23 @@ ul.color-set > li div {
   padding: 10px 20px;
   border-top: 1px solid #ddd;
 }
+.box .box-header:before,
+.box .box-body:before,
+.box .box-footer:before,
+.box .box-header:after,
+.box .box-body:after,
+.box .box-footer:after {
+  content: " ";
+  display: table;
+}
+.box .box-header:after,
+.box .box-body:after,
+.box .box-footer:after {
+  clear: both;
+}
 /* Button */
 .btn {
-  padding: 8px 25px;
+  padding: 6px 20px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -245,6 +260,69 @@ ul.color-set > li div {
   border-color: #50a8e1;
   box-shadow: none;
 }
+textarea {
+  resize: none;
+}
+.has-success .checkbox,
+.has-success .checkbox-inline,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .radio,
+.has-success .radio-inline,
+.has-success.checkbox label,
+.has-success.checkbox-inline label,
+.has-success.radio label,
+.has-success.radio-inline label {
+  color: #27ae60;
+}
+.has-success .form-control {
+  border-color: #2ecc71;
+  box-shadow: none;
+}
+.has-success .form-control:focus {
+  border-color: #27ae60;
+  box-shadow: none;
+}
+.has-warning .checkbox,
+.has-warning .checkbox-inline,
+.has-warning .control-label,
+.has-warning .help-block,
+.has-warning .radio,
+.has-warning .radio-inline,
+.has-warning.checkbox label,
+.has-warning.checkbox-inline label,
+.has-warning.radio label,
+.has-warning.radio-inline label {
+  color: #f39c12;
+}
+.has-warning .form-control {
+  border-color: #f1c40f !important;
+  box-shadow: none;
+}
+.has-warning .form-control:focus {
+  border-color: #f39c12 !important;
+  box-shadow: none;
+}
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+  color: #c0392b;
+}
+.has-error .form-control {
+  border-color: #e74c3c !important;
+  box-shadow: none;
+}
+.has-error .form-control:focus {
+  border-color: #c0392b !important;
+  box-shadow: none;
+}
 /* Error */
 .err {
   text-align: center;
@@ -271,9 +349,6 @@ header {
   margin-bottom: 25px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-header .main-menu {
-  height: 76px;
-}
 header .main-menu > ul {
   list-style: none;
   padding-left: 0px;
@@ -287,6 +362,7 @@ header .main-menu > ul > li > a {
   display: block;
   padding: 10px 15px 7px;
   color: #aaa;
+  height: 76px;
 }
 header .main-menu > ul > li > a div i {
   font-size: 36px;
