@@ -207,6 +207,14 @@ ul {
 	padding: 8px 25px;
 	.BorderRadius(3px);
 	border: none;
+	&:focus,
+	&.focus,
+	&:active:focus,
+	&.active:focus,
+	&:active.focus,
+	&.active.focus {
+		outline: none;
+	}
 	&.btn-default {
 		color: #333;
 		background-color: @defaultColor;
@@ -445,6 +453,30 @@ header {
 					background-color: #fffbea;
 				}
 			}
+		}
+	}
+}
+
+/* Icons */
+.fontawesome-icon-list {
+	> div {
+		margin-bottom: 5px;
+	}
+	i {
+		width: 15px;
+		margin-right: 10px;
+	}
+}
+#icons {
+	list-style: none;
+	padding-left: 0px;
+	> li {
+		display: inline-block;
+		width: 24.5%;
+		margin-bottom: 5px;
+		&:before {
+			width: 20px;
+			margin-right: 5px;
 		}
 	}
 }

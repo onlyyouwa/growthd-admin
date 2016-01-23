@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Growthd Admin v1</title>
+
+	<!-- Utf-8 Chartset -->
+	<meta charset="utf-8">
+
+	<!-- Responsive layout -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Import Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Style -->	
+	<link rel="stylesheet" type="text/css" href="../libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/Ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+
+</head>
+<body class="theme-default">
+
+	<header>
+		<!-- Top Navbar -->
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-toggle" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">G-Admin v1</a>
+				</div>
+
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell-o"></i>
+								<span class="bubble bubble-danger">2</span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="new">
+									<a href="#">
+										<h5>Notification #1</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li class="new">
+									<a href="#">
+										<h5>Notification #2</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #3</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #4</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Show all notifications
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope-o"></i>
+								<span class="bubble bubble-warning bubble-noitem"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="empty">
+									No new messages
+								</li>
+								<li>
+									<a href="#">
+										Show all messages
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown has-image">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../img/default-user.png" alt=""> Admin<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Setting</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Log out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling
+				<div class="collapse navbar-collapse" id="navbar-toggle">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+				</div> /.navbar-collapse --> 
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- Main Menu -->
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="#">
+						<div><i class="ion-ios-speedometer-outline"></i></div>
+						Dashboard
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-photos-outline"></i></div>
+						Pages <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>Blank</a></li>
+						<li>Login</a></li>
+						<li>Register</a></li>
+						<li>404 Error</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-monitor-outline"></i></div>
+						Components <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>General</a></li>
+						<li>Buttons</a></li>
+						<li>Icons</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<div><i class="ion-ios-compose-outline"></i></div>
+						Forms
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-grid-view-outline"></i></div>
+						Tables <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li>Normal tables</a></li>
+						<li>Data tables</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- End Main Menu -->
+	</header>
+
+	<!-- Main Content -->
+	<div class="main-content container">
+
+		<h2 class="color-blue">Icons</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">
+						<h4>Font Awesome</h4>
+					</div>
+					<div class="box-content">
+						<section id="new">
+  							<h2 class="page-header">20 New Icons in 4.5</h2>
+ 							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth"></i> bluetooth</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth-b"></i> bluetooth-b</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-codiepie"></i> codiepie</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-credit-card-alt"></i> credit-card-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-edge"></i> edge</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fort-awesome"></i> fort-awesome</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hashtag"></i> hashtag</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mixcloud"></i> mixcloud</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-modx"></i> modx</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pause-circle"></i> pause-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pause-circle-o"></i> pause-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-percent"></i> percent</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-product-hunt"></i> product-hunt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reddit-alien"></i> reddit-alien</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-scribd"></i> scribd</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shopping-bag"></i> shopping-bag</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shopping-basket"></i> shopping-basket</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stop-circle"></i> stop-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stop-circle-o"></i> stop-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-usb"></i> usb</div>
+							</div>
+						</section>
+
+						<section id="web-application">
+							<h2 class="page-header">Web Application Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-adjust"></i> adjust</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-anchor"></i> anchor</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-archive"></i> archive</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-area-chart"></i> area-chart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows"></i> arrows</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-h"></i> arrows-h</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-v"></i> arrows-v</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-asterisk"></i> asterisk</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-at"></i> at</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-automobile"></i> automobile <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-balance-scale"></i> balance-scale</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ban"></i> ban</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bank"></i> bank <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bar-chart"></i> bar-chart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bar-chart-o"></i> bar-chart-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-barcode"></i> barcode</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bars"></i> bars</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-0"></i> battery-0 <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-1"></i> battery-1 <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-2"></i> battery-2 <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-3"></i> battery-3 <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-4"></i> battery-4 <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-empty"></i> battery-empty</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-full"></i> battery-full</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-half"></i> battery-half</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-quarter"></i> battery-quarter</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-battery-three-quarters"></i> battery-three-quarters</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bed"></i> bed</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-beer"></i> beer</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bell"></i> bell</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bell-o"></i> bell-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bell-slash"></i> bell-slash</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bell-slash-o"></i> bell-slash-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bicycle"></i> bicycle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-binoculars"></i> binoculars</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-birthday-cake"></i> birthday-cake</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth"></i> bluetooth</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth-b"></i> bluetooth-b</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bolt"></i> bolt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bomb"></i> bomb</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-book"></i> book</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bookmark"></i> bookmark</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bookmark-o"></i> bookmark-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-briefcase"></i> briefcase</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bug"></i> bug</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-building"></i> building</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-building-o"></i> building-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bullhorn"></i> bullhorn</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bullseye"></i> bullseye</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bus"></i> bus</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cab"></i> cab <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calculator"></i> calculator</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar"></i> calendar</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar-check-o"></i> calendar-check-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar-minus-o"></i> calendar-minus-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar-o"></i> calendar-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar-plus-o"></i> calendar-plus-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-calendar-times-o"></i> calendar-times-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-camera"></i> camera</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-camera-retro"></i> camera-retro</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-car"></i> car</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-down"></i> caret-square-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-left"></i> caret-square-o-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-right"></i> caret-square-o-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-up"></i> caret-square-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cart-arrow-down"></i> cart-arrow-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cart-plus"></i> cart-plus</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc"></i> cc</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-certificate"></i> certificate</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check"></i> check</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-circle"></i> check-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-circle-o"></i> check-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-square"></i> check-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-square-o"></i> check-square-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-child"></i> child</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle"></i> circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle-o"></i> circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle-o-notch"></i> circle-o-notch</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle-thin"></i> circle-thin</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-clock-o"></i> clock-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-clone"></i> clone</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-close"></i> close <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cloud"></i> cloud</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cloud-download"></i> cloud-download</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cloud-upload"></i> cloud-upload</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-code"></i> code</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-code-fork"></i> code-fork</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-coffee"></i> coffee</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cog"></i> cog</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cogs"></i> cogs</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-comment"></i> comment</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-comment-o"></i> comment-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-commenting"></i> commenting</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-commenting-o"></i> commenting-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-comments"></i> comments</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-comments-o"></i> comments-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-compass"></i> compass</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-copyright"></i> copyright</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-creative-commons"></i> creative-commons</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-credit-card"></i> credit-card</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-credit-card-alt"></i> credit-card-alt</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-crop"></i> crop</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-crosshairs"></i> crosshairs</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cube"></i> cube</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cubes"></i> cubes</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cutlery"></i> cutlery</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dashboard"></i> dashboard <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-database"></i> database</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-desktop"></i> desktop</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-diamond"></i> diamond</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dot-circle-o"></i> dot-circle-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-download"></i> download</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-edit"></i> edit <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ellipsis-h"></i> ellipsis-h</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ellipsis-v"></i> ellipsis-v</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-envelope"></i> envelope</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-envelope-o"></i> envelope-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-envelope-square"></i> envelope-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eraser"></i> eraser</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-exchange"></i> exchange</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-exclamation"></i> exclamation</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-exclamation-circle"></i> exclamation-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-exclamation-triangle"></i> exclamation-triangle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-external-link"></i> external-link</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-external-link-square"></i> external-link-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eye"></i> eye</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eye-slash"></i> eye-slash</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eyedropper"></i> eyedropper</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fax"></i> fax</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-feed"></i> feed <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-female"></i> female</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fighter-jet"></i> fighter-jet</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-archive-o"></i> file-archive-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-audio-o"></i> file-audio-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-code-o"></i> file-code-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-excel-o"></i> file-excel-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-image-o"></i> file-image-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-movie-o"></i> file-movie-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-pdf-o"></i> file-pdf-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-photo-o"></i> file-photo-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-picture-o"></i> file-picture-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-powerpoint-o"></i> file-powerpoint-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-sound-o"></i> file-sound-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-video-o"></i> file-video-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-word-o"></i> file-word-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-zip-o"></i> file-zip-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-film"></i> film</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-filter"></i> filter</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fire"></i> fire</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fire-extinguisher"></i> fire-extinguisher</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flag"></i> flag</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flag-checkered"></i> flag-checkered</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flag-o"></i> flag-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flash"></i> flash <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flask"></i> flask</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-folder"></i> folder</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-folder-o"></i> folder-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-folder-open"></i> folder-open</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-folder-open-o"></i> folder-open-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-frown-o"></i> frown-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-futbol-o"></i> futbol-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gamepad"></i> gamepad</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gavel"></i> gavel</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gear"></i> gear <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gears"></i> gears <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gift"></i> gift</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-glass"></i> glass</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-globe"></i> globe</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-graduation-cap"></i> graduation-cap</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-group"></i> group <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-grab-o"></i> hand-grab-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-lizard-o"></i> hand-lizard-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-paper-o"></i> hand-paper-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-peace-o"></i> hand-peace-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-pointer-o"></i> hand-pointer-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-rock-o"></i> hand-rock-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-scissors-o"></i> hand-scissors-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-spock-o"></i> hand-spock-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-stop-o"></i> hand-stop-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hashtag"></i> hashtag</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hdd-o"></i> hdd-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-headphones"></i> headphones</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heart"></i> heart</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heart-o"></i> heart-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heartbeat"></i> heartbeat</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-history"></i> history</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-home"></i> home</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hotel"></i> hotel <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass"></i> hourglass</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-1"></i> hourglass-1 <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-2"></i> hourglass-2 <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-3"></i> hourglass-3 <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-end"></i> hourglass-end</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-half"></i> hourglass-half</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-o"></i> hourglass-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hourglass-start"></i> hourglass-start</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-i-cursor"></i> i-cursor</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-image"></i> image <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-inbox"></i> inbox</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-industry"></i> industry</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-info"></i> info</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-info-circle"></i> info-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-institution"></i> institution <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-key"></i> key</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-keyboard-o"></i> keyboard-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-language"></i> language</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-laptop"></i> laptop</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-leaf"></i> leaf</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-legal"></i> legal <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-lemon-o"></i> lemon-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-level-down"></i> level-down</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-level-up"></i> level-up</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-life-bouy"></i> life-bouy <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-life-buoy"></i> life-buoy <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-life-ring"></i> life-ring</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-life-saver"></i> life-saver <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-lightbulb-o"></i> lightbulb-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-line-chart"></i> line-chart</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-location-arrow"></i> location-arrow</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-lock"></i> lock</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-magic"></i> magic</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-magnet"></i> magnet</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mail-forward"></i> mail-forward <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mail-reply"></i> mail-reply <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mail-reply-all"></i> mail-reply-all <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-male"></i> male</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-map"></i> map</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-map-marker"></i> map-marker</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-map-o"></i> map-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-map-pin"></i> map-pin</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-map-signs"></i> map-signs</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-meh-o"></i> meh-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-microphone"></i> microphone</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-microphone-slash"></i> microphone-slash</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus"></i> minus</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus-circle"></i> minus-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus-square"></i> minus-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus-square-o"></i> minus-square-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mobile"></i> mobile</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mobile-phone"></i> mobile-phone <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-money"></i> money</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-moon-o"></i> moon-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mortar-board"></i> mortar-board <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-motorcycle"></i> motorcycle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mouse-pointer"></i> mouse-pointer</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-music"></i> music</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-navicon"></i> navicon <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-newspaper-o"></i> newspaper-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-object-group"></i> object-group</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-object-ungroup"></i> object-ungroup</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paint-brush"></i> paint-brush</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paper-plane"></i> paper-plane</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paper-plane-o"></i> paper-plane-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paw"></i> paw</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pencil"></i> pencil</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pencil-square"></i> pencil-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pencil-square-o"></i> pencil-square-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-percent"></i> percent</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-phone"></i> phone</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-phone-square"></i> phone-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-photo"></i> photo <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-picture-o"></i> picture-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pie-chart"></i> pie-chart</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plane"></i> plane</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plug"></i> plug</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus"></i> plus</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-circle"></i> plus-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-square"></i> plus-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-square-o"></i> plus-square-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-power-off"></i> power-off</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-print"></i> print</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-puzzle-piece"></i> puzzle-piece</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-qrcode"></i> qrcode</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-question"></i> question</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-question-circle"></i> question-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-quote-left"></i> quote-left</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-quote-right"></i> quote-right</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-random"></i> random</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-recycle"></i> recycle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-refresh"></i> refresh</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-registered"></i> registered</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-remove"></i> remove <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reorder"></i> reorder <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reply"></i> reply</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reply-all"></i> reply-all</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-retweet"></i> retweet</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-road"></i> road</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rocket"></i> rocket</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rss"></i> rss</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rss-square"></i> rss-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-search"></i> search</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-search-minus"></i> search-minus</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-search-plus"></i> search-plus</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-send"></i> send <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-send-o"></i> send-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-server"></i> server</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share"></i> share</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-alt"></i> share-alt</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-alt-square"></i> share-alt-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-square"></i> share-square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-square-o"></i> share-square-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shield"></i> shield</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ship"></i> ship</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shopping-bag"></i> shopping-bag</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shopping-basket"></i> shopping-basket</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shopping-cart"></i> shopping-cart</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sign-in"></i> sign-in</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sign-out"></i> sign-out</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-signal"></i> signal</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sitemap"></i> sitemap</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sliders"></i> sliders</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-smile-o"></i> smile-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-soccer-ball-o"></i> soccer-ball-o <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort"></i> sort</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-alpha-asc"></i> sort-alpha-asc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-alpha-desc"></i> sort-alpha-desc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-amount-asc"></i> sort-amount-asc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-amount-desc"></i> sort-amount-desc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-asc"></i> sort-asc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-desc"></i> sort-desc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-down"></i> sort-down <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-numeric-asc"></i> sort-numeric-asc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-numeric-desc"></i> sort-numeric-desc</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sort-up"></i> sort-up <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-space-shuttle"></i> space-shuttle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-spinner"></i> spinner</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-spoon"></i> spoon</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-square"></i> square</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-square-o"></i> square-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star"></i> star</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star-half"></i> star-half</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star-half-empty"></i> star-half-empty <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star-half-full"></i> star-half-full <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star-half-o"></i> star-half-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-star-o"></i> star-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sticky-note"></i> sticky-note</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sticky-note-o"></i> sticky-note-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-street-view"></i> street-view</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-suitcase"></i> suitcase</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sun-o"></i> sun-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-support"></i> support <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tablet"></i> tablet</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tachometer"></i> tachometer</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tag"></i> tag</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tags"></i> tags</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tasks"></i> tasks</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-taxi"></i> taxi</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-television"></i> television</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-terminal"></i> terminal</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumb-tack"></i> thumb-tack</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-down"></i> thumbs-down</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-o-down"></i> thumbs-o-down</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-o-up"></i> thumbs-o-up</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-up"></i> thumbs-up</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ticket"></i> ticket</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-times"></i> times</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-times-circle"></i> times-circle</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-times-circle-o"></i> times-circle-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tint"></i> tint</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-down"></i> toggle-down <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-left"></i> toggle-left <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-off"></i> toggle-off</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-on"></i> toggle-on</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-right"></i> toggle-right <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-up"></i> toggle-up <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-trademark"></i> trademark</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-trash"></i> trash</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-trash-o"></i> trash-o</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tree"></i> tree</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-trophy"></i> trophy</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-truck"></i> truck</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tty"></i> tty</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tv"></i> tv <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-umbrella"></i> umbrella</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-university"></i> university</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-unlock"></i> unlock</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-unlock-alt"></i> unlock-alt</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-unsorted"></i> unsorted <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-upload"></i> upload</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-user"></i> user</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-user-plus"></i> user-plus</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-user-secret"></i> user-secret</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-user-times"></i> user-times</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-users"></i> users</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-video-camera"></i> video-camera</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-volume-down"></i> volume-down</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-volume-off"></i> volume-off</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-volume-up"></i> volume-up</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-warning"></i> warning <span class="text-muted">(alias)</span></div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wheelchair"></i> wheelchair</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wifi"></i> wifi</div>
+
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wrench"></i> wrench</div>
+
+							</div>
+
+						</section>
+
+						<section id="hand">
+							<h2 class="page-header">Hand Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-grab-o"></i> hand-grab-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-lizard-o"></i> hand-lizard-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-down"></i> hand-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-left"></i> hand-o-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-right"></i> hand-o-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-up"></i> hand-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-paper-o"></i> hand-paper-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-peace-o"></i> hand-peace-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-pointer-o"></i> hand-pointer-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-rock-o"></i> hand-rock-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-scissors-o"></i> hand-scissors-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-spock-o"></i> hand-spock-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-stop-o"></i> hand-stop-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-down"></i> thumbs-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-o-down"></i> thumbs-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-o-up"></i> thumbs-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-thumbs-up"></i> thumbs-up</div>
+							</div>
+						</section>
+
+						<section id="transportation">
+							<h2 class="page-header">Transportation Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ambulance"></i> ambulance</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-automobile"></i> automobile <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bicycle"></i> bicycle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bus"></i> bus</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cab"></i> cab <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-car"></i> car</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fighter-jet"></i> fighter-jet</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-motorcycle"></i> motorcycle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plane"></i> plane</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rocket"></i> rocket</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ship"></i> ship</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-space-shuttle"></i> space-shuttle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-subway"></i> subway</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-taxi"></i> taxi</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-train"></i> train</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-truck"></i> truck</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wheelchair"></i> wheelchair</div>
+							</div>
+						</section>
+
+						<section id="gender">
+							<h2 class="page-header">Gender Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-genderless"></i> genderless</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-intersex"></i> intersex <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mars"></i> mars</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mars-double"></i> mars-double</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mars-stroke"></i> mars-stroke</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mars-stroke-h"></i> mars-stroke-h</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mars-stroke-v"></i> mars-stroke-v</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mercury"></i> mercury</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-neuter"></i> neuter</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-transgender"></i> transgender</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-transgender-alt"></i> transgender-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-venus"></i> venus</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-venus-double"></i> venus-double</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-venus-mars"></i> venus-mars</div>
+							</div>
+						</section>
+
+						<section id="file-type">
+							<h2 class="page-header">File Type Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file"></i> file</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-archive-o"></i> file-archive-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-audio-o"></i> file-audio-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-code-o"></i> file-code-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-excel-o"></i> file-excel-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-image-o"></i> file-image-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-movie-o"></i> file-movie-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-o"></i> file-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-pdf-o"></i> file-pdf-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-photo-o"></i> file-photo-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-picture-o"></i> file-picture-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-powerpoint-o"></i> file-powerpoint-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-sound-o"></i> file-sound-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-text"></i> file-text</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-text-o"></i> file-text-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-video-o"></i> file-video-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-word-o"></i> file-word-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-zip-o"></i> file-zip-o <span class="text-muted">(alias)</span></div>
+							</div>
+						</section>
+
+						<section id="spinner">
+							<h2 class="page-header">Spinner Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle-o-notch"></i> circle-o-notch</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cog"></i> cog</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gear"></i> gear <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-refresh"></i> refresh</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-spinner"></i> spinner</div>
+							</div>
+						</section>
+
+						<section id="form-control">
+							<h2 class="page-header">Form Control Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-square"></i> check-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-check-square-o"></i> check-square-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle"></i> circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-circle-o"></i> circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dot-circle-o"></i> dot-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus-square"></i> minus-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-minus-square-o"></i> minus-square-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-square"></i> plus-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-square-o"></i> plus-square-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-square"></i> square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-square-o"></i> square-o</div>
+							</div>
+						</section>
+
+						<section id="payment">
+							<h2 class="page-header">Payment Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-amex"></i> cc-amex</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-diners-club"></i> cc-diners-club</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-discover"></i> cc-discover</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-jcb"></i> cc-jcb</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-mastercard"></i> cc-mastercard</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-paypal"></i> cc-paypal</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-stripe"></i> cc-stripe</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-visa"></i> cc-visa</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-credit-card"></i> credit-card</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-credit-card-alt"></i> credit-card-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-google-wallet"></i> google-wallet</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paypal"></i> paypal</div>
+							</div>
+						</section>
+
+						<section id="chart">
+							<h2 class="page-header">Chart Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-area-chart"></i> area-chart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bar-chart"></i> bar-chart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bar-chart-o"></i> bar-chart-o <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-line-chart"></i> line-chart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pie-chart"></i> pie-chart</div>
+							</div>
+						</section>
+
+						<section id="currency">
+							<h2 class="page-header">Currency Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bitcoin"></i> bitcoin <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-btc"></i> btc</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cny"></i> cny <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dollar"></i> dollar <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eur"></i> eur</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-euro"></i> euro <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gbp"></i> gbp</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gg"></i> gg</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gg-circle"></i> gg-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ils"></i> ils</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-inr"></i> inr</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-jpy"></i> jpy</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-krw"></i> krw</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-money"></i> money</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rmb"></i> rmb <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rouble"></i> rouble <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rub"></i> rub</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ruble"></i> ruble <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rupee"></i> rupee <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shekel"></i> shekel <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sheqel"></i> sheqel <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-try"></i> try</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-turkish-lira"></i> turkish-lira <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-usd"></i> usd</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-won"></i> won <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-yen"></i> yen <span class="text-muted">(alias)</span></div>
+							</div>
+						</section>
+
+						<section id="text-editor">
+							<h2 class="page-header">Text Editor Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-align-center"></i> align-center</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-align-justify"></i> align-justify</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-align-left"></i> align-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-align-right"></i> align-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bold"></i> bold</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chain"></i> chain <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chain-broken"></i> chain-broken</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-clipboard"></i> clipboard</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-columns"></i> columns</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-copy"></i> copy <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cut"></i> cut <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dedent"></i> dedent <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eraser"></i> eraser</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file"></i> file</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-o"></i> file-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-text"></i> file-text</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-file-text-o"></i> file-text-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-files-o"></i> files-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-floppy-o"></i> floppy-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-font"></i> font</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-header"></i> header</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-indent"></i> indent</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-italic"></i> italic</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-link"></i> link</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-list"></i> list</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-list-alt"></i> list-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-list-ol"></i> list-ol</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-list-ul"></i> list-ul</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-outdent"></i> outdent</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paperclip"></i> paperclip</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paragraph"></i> paragraph</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paste"></i> paste <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-repeat"></i> repeat</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rotate-left"></i> rotate-left <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rotate-right"></i> rotate-right <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-save"></i> save <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-scissors"></i> scissors</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-strikethrough"></i> strikethrough</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-subscript"></i> subscript</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-superscript"></i> superscript</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-table"></i> table</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-text-height"></i> text-height</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-text-width"></i> text-width</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-th"></i> th</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-th-large"></i> th-large</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-th-list"></i> th-list</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-underline"></i> underline</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-undo"></i> undo</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-unlink"></i> unlink <span class="text-muted">(alias)</span></div>
+							</div>
+						</section>
+
+						<section id="directional">
+							<h2 class="page-header">Directional Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-double-down"></i> angle-double-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-double-left"></i> angle-double-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-double-right"></i> angle-double-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-double-up"></i> angle-double-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-down"></i> angle-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-left"></i> angle-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-right"></i> angle-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angle-up"></i> angle-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-down"></i> arrow-circle-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-left"></i> arrow-circle-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-o-down"></i> arrow-circle-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-o-left"></i> arrow-circle-o-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-o-right"></i> arrow-circle-o-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-o-up"></i> arrow-circle-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-right"></i> arrow-circle-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-circle-up"></i> arrow-circle-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-down"></i> arrow-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-left"></i> arrow-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-right"></i> arrow-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrow-up"></i> arrow-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows"></i> arrows</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-alt"></i> arrows-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-h"></i> arrows-h</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-v"></i> arrows-v</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-down"></i> caret-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-left"></i> caret-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-right"></i> caret-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-down"></i> caret-square-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-left"></i> caret-square-o-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-right"></i> caret-square-o-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-square-o-up"></i> caret-square-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-caret-up"></i> caret-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-circle-down"></i> chevron-circle-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-circle-left"></i> chevron-circle-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-circle-right"></i> chevron-circle-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-circle-up"></i> chevron-circle-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-down"></i> chevron-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-left"></i> chevron-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-right"></i> chevron-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chevron-up"></i> chevron-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-exchange"></i> exchange</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-down"></i> hand-o-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-left"></i> hand-o-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-right"></i> hand-o-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hand-o-up"></i> hand-o-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-long-arrow-down"></i> long-arrow-down</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-long-arrow-left"></i> long-arrow-left</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-long-arrow-right"></i> long-arrow-right</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-long-arrow-up"></i> long-arrow-up</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-down"></i> toggle-down <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-left"></i> toggle-left <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-right"></i> toggle-right <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-toggle-up"></i> toggle-up <span class="text-muted">(alias)</span></div>
+							</div>
+						</section>
+
+						<section id="video-player">
+							<h2 class="page-header">Video Player Icons</h2>
+							<div class="row fontawesome-icon-list">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-arrows-alt"></i> arrows-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-backward"></i> backward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-compress"></i> compress</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-eject"></i> eject</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-expand"></i> expand</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fast-backward"></i> fast-backward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fast-forward"></i> fast-forward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-forward"></i> forward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pause"></i> pause</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pause-circle"></i> pause-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pause-circle-o"></i> pause-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-play"></i> play</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-play-circle"></i> play-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-play-circle-o"></i> play-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-random"></i> random</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-step-backward"></i> step-backward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-step-forward"></i> step-forward</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stop"></i> stop</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stop-circle"></i> stop-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stop-circle-o"></i> stop-circle-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-youtube-play"></i> youtube-play</div>
+							</div>
+						</section>
+
+						<section id="brand">
+							<h2 class="page-header">Brand Icons</h2>
+							<div class="alert alert-success">
+								<ul class="margin-bottom-none padding-left-lg">
+									<li>All brand icons are trademarks of their respective owners.</li>
+									<li>The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.</li>
+									<li>Brand icons should only be used to represent the company or product to which they refer.</li>
+								</ul>
+							</div>
+							<div class="row fontawesome-icon-list margin-bottom-lg">
+								<div class="col-md-3 col-sm-4"><i class="fa fa-500px"></i> 500px</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-adn"></i> adn</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-amazon"></i> amazon</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-android"></i> android</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-angellist"></i> angellist</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-apple"></i> apple</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-behance"></i> behance</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-behance-square"></i> behance-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bitbucket"></i> bitbucket</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bitbucket-square"></i> bitbucket-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bitcoin"></i> bitcoin <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-black-tie"></i> black-tie</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth"></i> bluetooth</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-bluetooth-b"></i> bluetooth-b</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-btc"></i> btc</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-buysellads"></i> buysellads</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-amex"></i> cc-amex</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-diners-club"></i> cc-diners-club</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-discover"></i> cc-discover</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-jcb"></i> cc-jcb</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-mastercard"></i> cc-mastercard</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-paypal"></i> cc-paypal</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-stripe"></i> cc-stripe</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-cc-visa"></i> cc-visa</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-chrome"></i> chrome</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-codepen"></i> codepen</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-codiepie"></i> codiepie</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-connectdevelop"></i> connectdevelop</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-contao"></i> contao</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-css3"></i> css3</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dashcube"></i> dashcube</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-delicious"></i> delicious</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-deviantart"></i> deviantart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-digg"></i> digg</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dribbble"></i> dribbble</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-dropbox"></i> dropbox</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-drupal"></i> drupal</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-edge"></i> edge</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-empire"></i> empire</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-expeditedssl"></i> expeditedssl</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-facebook"></i> facebook</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-facebook-f"></i> facebook-f <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-facebook-official"></i> facebook-official</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-facebook-square"></i> facebook-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-firefox"></i> firefox</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-flickr"></i> flickr</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fonticons"></i> fonticons</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-fort-awesome"></i> fort-awesome</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-forumbee"></i> forumbee</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-foursquare"></i> foursquare</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ge"></i> ge <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-get-pocket"></i> get-pocket</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gg"></i> gg</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gg-circle"></i> gg-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-git"></i> git</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-git-square"></i> git-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-github"></i> github</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-github-alt"></i> github-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-github-square"></i> github-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gittip"></i> gittip <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-google"></i> google</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-google-plus"></i> google-plus</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-google-plus-square"></i> google-plus-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-google-wallet"></i> google-wallet</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-gratipay"></i> gratipay</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hacker-news"></i> hacker-news</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-houzz"></i> houzz</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-html5"></i> html5</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-instagram"></i> instagram</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-internet-explorer"></i> internet-explorer</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ioxhost"></i> ioxhost</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-joomla"></i> joomla</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-jsfiddle"></i> jsfiddle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-lastfm"></i> lastfm</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-lastfm-square"></i> lastfm-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-leanpub"></i> leanpub</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-linkedin"></i> linkedin</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-linkedin-square"></i> linkedin-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-linux"></i> linux</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-maxcdn"></i> maxcdn</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-meanpath"></i> meanpath</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-medium"></i> medium</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-mixcloud"></i> mixcloud</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-modx"></i> modx</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-odnoklassniki"></i> odnoklassniki</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-odnoklassniki-square"></i> odnoklassniki-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-opencart"></i> opencart</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-openid"></i> openid</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-opera"></i> opera</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-optin-monster"></i> optin-monster</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pagelines"></i> pagelines</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-paypal"></i> paypal</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pied-piper"></i> pied-piper</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pied-piper-alt"></i> pied-piper-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pinterest"></i> pinterest</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pinterest-p"></i> pinterest-p</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-pinterest-square"></i> pinterest-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-product-hunt"></i> product-hunt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-qq"></i> qq</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ra"></i> ra <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-rebel"></i> rebel</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reddit"></i> reddit</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reddit-alien"></i> reddit-alien</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-reddit-square"></i> reddit-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-renren"></i> renren</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-safari"></i> safari</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-scribd"></i> scribd</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-sellsy"></i> sellsy</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-alt"></i> share-alt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-share-alt-square"></i> share-alt-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-shirtsinbulk"></i> shirtsinbulk</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-simplybuilt"></i> simplybuilt</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-skyatlas"></i> skyatlas</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-skype"></i> skype</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-slack"></i> slack</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-slideshare"></i> slideshare</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-soundcloud"></i> soundcloud</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-spotify"></i> spotify</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stack-exchange"></i> stack-exchange</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stack-overflow"></i> stack-overflow</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-steam"></i> steam</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-steam-square"></i> steam-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stumbleupon"></i> stumbleupon</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stumbleupon-circle"></i> stumbleupon-circle</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tencent-weibo"></i> tencent-weibo</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-trello"></i> trello</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tripadvisor"></i> tripadvisor</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tumblr"></i> tumblr</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-tumblr-square"></i> tumblr-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-twitch"></i> twitch</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-twitter"></i> twitter</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-twitter-square"></i> twitter-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-usb"></i> usb</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-viacoin"></i> viacoin</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-vimeo"></i> vimeo</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-vimeo-square"></i> vimeo-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-vine"></i> vine</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-vk"></i> vk</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wechat"></i> wechat <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-weibo"></i> weibo</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-weixin"></i> weixin</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-whatsapp"></i> whatsapp</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wikipedia-w"></i> wikipedia-w</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-windows"></i> windows</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wordpress"></i> wordpress</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-xing"></i> xing</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-xing-square"></i> xing-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-y-combinator"></i> y-combinator</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-y-combinator-square"></i> y-combinator-square <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-yahoo"></i> yahoo</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-yc"></i> yc <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-yc-square"></i> yc-square <span class="text-muted">(alias)</span></div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-yelp"></i> yelp</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-youtube"></i> youtube</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-youtube-play"></i> youtube-play</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-youtube-square"></i> youtube-square</div>
+							</div>
+						</section>
+						<section id="medical">
+							<h2 class="page-header">Medical Icons</h2>
+							<div class="row fontawesome-icon-list">    
+								<div class="col-md-3 col-sm-4"><i class="fa fa-ambulance"></i> ambulance</div>  
+								<div class="col-md-3 col-sm-4"><i class="fa fa-h-square"></i> h-square</div>  
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heart"></i> heart</div>  
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heart-o"></i> heart-o</div> 
+								<div class="col-md-3 col-sm-4"><i class="fa fa-heartbeat"></i> heartbeat</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-hospital-o"></i> hospital-o</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-medkit"></i> medkit</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-plus-square"></i> plus-square</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-stethoscope"></i> stethoscope</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-user-md"></i> user-md</div>
+								<div class="col-md-3 col-sm-4"><i class="fa fa-wheelchair"></i> wheelchair</div>
+							</div>
+						</section>
+					</div>
+					<!-- End Box Content -->
+				</div>
+				<!-- End box -->
+			</div>
+			<!-- End col -->
+		</div>
+		<!-- End row -->
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">
+						<h4>Ionicons</h4>
+					</div>
+					<div class="box-content">
+						<ul id="icons">
+							<li class="ion-ionic" data-pack="default" data-tags="badass, framework, sexy, hawt"> ion-ionic</li>
+							<li class="ion-arrow-up-a" data-pack="default" data-tags=""> ion-arrow-up-a</li>
+							<li class="ion-arrow-right-a" data-pack="default" data-tags=""> ion-arrow-right-a</li>
+							<li class="ion-arrow-down-a" data-pack="default" data-tags=""> ion-arrow-down-a</li>
+							<li class="ion-arrow-left-a" data-pack="default" data-tags=""> ion-arrow-left-a</li>
+							<li class="ion-arrow-up-b" data-pack="default" data-tags=""> ion-arrow-up-b</li>
+							<li class="ion-arrow-right-b" data-pack="default" data-tags=""> ion-arrow-right-b</li>
+							<li class="ion-arrow-down-b" data-pack="default" data-tags=""> ion-arrow-down-b</li>
+							<li class="ion-arrow-left-b" data-pack="default" data-tags=""> ion-arrow-left-b</li>
+							<li class="ion-arrow-up-c" data-pack="default" data-tags=""> ion-arrow-up-c</li>
+							<li class="ion-arrow-right-c" data-pack="default" data-tags=""> ion-arrow-right-c</li>
+							<li class="ion-arrow-down-c" data-pack="default" data-tags=""> ion-arrow-down-c</li>
+							<li class="ion-arrow-left-c" data-pack="default" data-tags=""> ion-arrow-left-c</li>
+							<li class="ion-arrow-return-right" data-pack="default" data-tags="">ion-arrow-return-right</li>
+							<li class="ion-arrow-return-left" data-pack="default" data-tags="">ion-arrow-return-left</li>
+							<li class="ion-arrow-swap" data-pack="default" data-tags="switch, flip">ion-arrow-swap</li>
+							<li class="ion-arrow-shrink" data-pack="default" data-tags="pinch">ion-arrow-shrink</li>
+							<li class="ion-arrow-expand" data-pack="default" data-tags="fullscreen">ion-arrow-expand</li>
+							<li class="ion-arrow-move" data-pack="default" data-tags="drag">ion-arrow-move</li>
+							<li class="ion-arrow-resize" data-pack="default" data-tags="drag">ion-arrow-resize</li>
+							<li class="ion-chevron-up" data-pack="default" data-tags="arrow, up">ion-chevron-up</li>
+							<li class="ion-chevron-right" data-pack="default" data-tags="arrow, right">ion-chevron-right</li>
+							<li class="ion-chevron-down" data-pack="default" data-tags="arrow, down">ion-chevron-down</li>
+							<li class="ion-chevron-left" data-pack="default" data-tags="arrow, left">ion-chevron-left</li>
+							<li class="ion-navicon-round" data-pack="default" data-tags="menu, hamburger, slide menu">ion-navicon-round</li>
+							<li class="ion-navicon" data-pack="default" data-tags="menu, hamburger, slide menu">ion-navicon</li>
+							<li class="ion-drag" data-pack="default" data-tags="reorder, move, drag">ion-drag</li>
+							<li class="ion-log-in" data-pack="default" data-tags="sign in, ">ion-log-in</li>
+							<li class="ion-log-out" data-pack="default" data-tags="sign out">ion-log-out</li>
+							<li class="ion-checkmark-round" data-pack="default" data-tags="complete, finished, success, on">ion-checkmark-round</li>
+							<li class="ion-checkmark" data-pack="default" data-tags="complete, finished, success, on">ion-checkmark</li>
+							<li class="ion-checkmark-circled" data-pack="default" data-tags="complete, finished, success, on">ion-checkmark-circled</li>
+							<li class="ion-close-round" data-pack="default" data-tags="delete, trash, kill, x">ion-close-round</li>
+							<li class="ion-close" data-pack="default" data-tags="delete, trash, kill, x">ion-close</li>
+							<li class="ion-close-circled" data-pack="default" data-tags="delete, trash, kill, x">ion-close-circled</li>
+							<li class="ion-plus-round" data-pack="default" data-tags="add, include, new, invite, +">ion-plus-round</li>
+							<li class="ion-plus" data-pack="default" data-tags="add, include, new, invite, +">ion-plus</li>
+							<li class="ion-plus-circled" data-pack="default" data-tags="add, include, new, invite, +">ion-plus-circled</li>
+							<li class="ion-minus-round" data-pack="default" data-tags="hide, remove, minimize, -">ion-minus-round</li>
+							<li class="ion-minus" data-pack="default" data-tags="hide, remove, minimize, -">ion-minus</li>
+							<li class="ion-minus-circled" data-pack="default" data-tags="hide, remove, minimize, -">ion-minus-circled</li>
+							<li class="ion-information" data-pack="default" data-tags="help, more, tooltip">ion-information</li>
+							<li class="ion-information-circled" data-pack="default" data-tags="help, more, tooltip">ion-information-circled</li>
+							<li class="ion-help" data-pack="default" data-tags="question, ?">ion-help</li>
+							<li class="ion-help-circled" data-pack="default" data-tags="question, ?">ion-help-circled</li>
+							<li class="ion-backspace-outline" data-pack="default" data-tags="delete, remove, back">ion-backspace-outline</li>
+							<li class="ion-backspace" data-pack="default" data-tags="delete, remove, back">ion-backspace</li>
+							<li class="ion-help-buoy" data-pack="default" data-tags="question, ?">ion-help-buoy</li>
+							<li class="ion-asterisk" data-pack="default" data-tags="favorite, mark, star">ion-asterisk</li>
+							<li class="ion-alert" data-pack="default" data-tags="attention, warning, notice, !, exclamation">ion-alert</li>
+							<li class="ion-alert-circled" data-pack="default" data-tags="attention, warning, notice, !, exclamation">ion-alert-circled</li>
+							<li class="ion-refresh" data-pack="default" data-tags="reload, renew">ion-refresh</li>
+							<li class="ion-loop" data-pack="default" data-tags="refresh">ion-loop</li>
+							<li class="ion-shuffle" data-pack="default" data-tags="random">ion-shuffle</li>
+							<li class="ion-home" data-pack="default" data-tags="house">ion-home</li>
+							<li class="ion-search" data-pack="default" data-tags="magnifying glass">ion-search</li>
+							<li class="ion-flag" data-pack="default" data-tags="favorite, mark, star">ion-flag</li>
+							<li class="ion-star" data-pack="default" data-tags="favorite">ion-star</li>
+							<li class="ion-heart" data-pack="default" data-tags="love">ion-heart</li>
+							<li class="ion-heart-broken" data-pack="default" data-tags="love">ion-heart-broken</li>
+							<li class="ion-gear-a" data-pack="default" data-tags="settings, options, cog">ion-gear-a</li>
+							<li class="ion-gear-b" data-pack="default" data-tags="settings, options, cog">ion-gear-b</li>
+							<li class="ion-toggle-filled" data-pack="default" data-tags="settings, options, switch">ion-toggle-filled</li>
+							<li class="ion-toggle" data-pack="default" data-tags="settings, options, switch">ion-toggle</li>
+							<li class="ion-settings" data-pack="default" data-tags="options, tools">ion-settings</li>
+							<li class="ion-wrench" data-pack="default" data-tags="settings, options, tools">ion-wrench</li>
+							<li class="ion-hammer" data-pack="default" data-tags="settings, options, tools">ion-hammer</li>
+							<li class="ion-edit" data-pack="default" data-tags="change, update, write, type, pencil">ion-edit</li>
+							<li class="ion-trash-a" data-pack="default" data-tags="delete, remove, dump">ion-trash-a</li>
+							<li class="ion-trash-b" data-pack="default" data-tags="delete, remove, dump">ion-trash-b</li>
+							<li class="ion-document" data-pack="default" data-tags="paper, file">ion-document</li>
+							<li class="ion-document-text" data-pack="default" data-tags="paper, file">ion-document-text</li>
+							<li class="ion-clipboard" data-pack="default" data-tags="write">ion-clipboard</li>
+							<li class="ion-scissors" data-pack="default" data-tags="cut">ion-scissors</li>
+							<li class="ion-funnel" data-pack="default" data-tags="sort">ion-funnel</li>
+							<li class="ion-bookmark" data-pack="default" data-tags="favorite, tag, save">ion-bookmark</li>
+							<li class="ion-email" data-pack="default" data-tags="snail, mail, inbox">ion-email</li>
+							<li class="ion-email-unread" data-pack="default" data-tags="snail, mail, inbox">ion-email-unread</li>
+							<li class="ion-folder" data-pack="default" data-tags="snail, mail">ion-folder</li>
+							<li class="ion-filing" data-pack="default" data-tags="mail">ion-filing</li>
+							<li class="ion-archive" data-pack="default" data-tags="mail">ion-archive</li>
+							<li class="ion-reply" data-pack="default" data-tags="mail, undo">ion-reply</li>
+							<li class="ion-reply-all" data-pack="default" data-tags="mail">ion-reply-all</li>
+							<li class="ion-forward" data-pack="default" data-tags="mail, redo">ion-forward</li>
+							<li class="ion-share" data-pack="default" data-tags="outbound">ion-share</li>
+							<li class="ion-paper-airplane" data-pack="default" data-tags="outbound, mail, letter, send">ion-paper-airplane</li>
+							<li class="ion-link" data-pack="default" data-tags="chain, anchor, href, attach">ion-link</li>
+							<li class="ion-paperclip" data-pack="default" data-tags="attach">ion-paperclip</li>
+							<li class="ion-compose" data-pack="default" data-tags="write, compose, type">ion-compose</li>
+							<li class="ion-briefcase" data-pack="default" data-tags="store, organize">ion-briefcase</li>
+							<li class="ion-medkit" data-pack="default" data-tags="health">ion-medkit</li>
+							<li class="ion-at" data-pack="default" data-tags="@">ion-at</li>
+							<li class="ion-pound" data-pack="default" data-tags="hashtag, #">ion-pound</li>
+							<li class="ion-quote" data-pack="default" data-tags="chat, quotation">ion-quote</li>
+							<li class="ion-cloud" data-pack="default" data-tags="storage">ion-cloud</li>
+							<li class="ion-upload" data-pack="default" data-tags="storage, cloud">ion-upload</li>
+							<li class="ion-more" data-pack="default" data-tags="circles">ion-more</li>
+							<li class="ion-grid" data-pack="default" data-tags="menu">ion-grid</li>
+							<li class="ion-calendar" data-pack="default" data-tags="date, time, month, year">ion-calendar</li>
+							<li class="ion-clock" data-pack="default" data-tags="time, watch, hours, minutes, seconds">ion-clock</li>
+							<li class="ion-compass" data-pack="default" data-tags="location, directions, navigation">ion-compass</li>
+							<li class="ion-pinpoint" data-pack="default" data-tags="gps, navigation">ion-pinpoint</li>
+							<li class="ion-pin" data-pack="default" data-tags="gps, navigation">ion-pin</li>
+							<li class="ion-navigate" data-pack="default" data-tags="gps, location pin">ion-navigate</li>
+							<li class="ion-location" data-pack="default" data-tags="gps, navigation, pin">ion-location</li>
+							<li class="ion-map" data-pack="default" data-tags="gps, navigation, pin">ion-map</li>
+							<li class="ion-lock-combination" data-pack="default" data-tags="padlock, security">ion-lock-combination</li>
+							<li class="ion-locked" data-pack="default" data-tags="padlock, security">ion-locked</li>
+							<li class="ion-unlocked" data-pack="default" data-tags="padlock, security">ion-unlocked</li>
+							<li class="ion-key" data-pack="default" data-tags="access">ion-key</li>
+							<li class="ion-arrow-graph-up-right" data-pack="default" data-tags="stats">ion-arrow-graph-up-right</li>
+							<li class="ion-arrow-graph-down-right" data-pack="default" data-tags="stats">ion-arrow-graph-down-right</li>
+							<li class="ion-arrow-graph-up-left" data-pack="default" data-tags="stats">ion-arrow-graph-up-left</li>
+							<li class="ion-arrow-graph-down-left" data-pack="default" data-tags="stats">ion-arrow-graph-down-left</li>
+							<li class="ion-stats-bars" data-pack="default" data-tags="data">ion-stats-bars</li>
+							<li class="ion-connection-bars" data-pack="default" data-tags="data, stats">ion-connection-bars</li>
+							<li class="ion-pie-graph" data-pack="default" data-tags="stats">ion-pie-graph</li>
+							<li class="ion-chatbubble" data-pack="default" data-tags="talk">ion-chatbubble</li>
+							<li class="ion-chatbubble-working" data-pack="default" data-tags="talk">ion-chatbubble-working</li>
+							<li class="ion-chatbubbles" data-pack="default" data-tags="talk">ion-chatbubbles</li>
+							<li class="ion-chatbox" data-pack="default" data-tags="talk">ion-chatbox</li>
+							<li class="ion-chatbox-working" data-pack="default" data-tags="talk">ion-chatbox-working</li>
+							<li class="ion-chatboxes" data-pack="default" data-tags="talk">ion-chatboxes</li>
+							<li class="ion-person" data-pack="default" data-tags="users, staff, head, human">ion-person</li>
+							<li class="ion-person-add" data-pack="default" data-tags="users, staff, head, human, member, new">ion-person-add</li>
+							<li class="ion-person-stalker" data-pack="default" data-tags="people, human, users, staff">ion-person-stalker</li>
+							<li class="ion-woman" data-pack="default" data-tags="female, lady, girl, dudette">ion-woman</li>
+							<li class="ion-man" data-pack="default" data-tags="male, guy, boy, dude">ion-man</li>
+							<li class="ion-female" data-pack="default" data-tags="lady, girl, dudette">ion-female</li>
+							<li class="ion-male" data-pack="default" data-tags="male, guy, boy, dude">ion-male</li>
+							<li class="ion-transgender" data-pack="default" data-tags="">ion-transgender</li>
+							<li class="ion-fork" data-pack="default" data-tags="food, drink, eat">ion-fork</li>
+							<li class="ion-knife" data-pack="default" data-tags="food, drink, eat">ion-knife</li>
+							<li class="ion-spoon" data-pack="default" data-tags="food, drink, eat">ion-spoon</li>
+							<li class="ion-soup-can-outline" data-pack="default" data-tags="food, drink, eat">ion-soup-can-outline</li>
+							<li class="ion-soup-can" data-pack="default" data-tags="food, drink, eat">ion-soup-can</li>
+							<li class="ion-beer" data-pack="default" data-tags="food, drink, eat">ion-beer</li>
+							<li class="ion-wineglass" data-pack="default" data-tags="food, drink, eat">ion-wineglass</li>
+							<li class="ion-coffee" data-pack="default" data-tags="food, drink, eat, caffeine">ion-coffee</li>
+							<li class="ion-icecream" data-pack="default" data-tags="food, drink, eat">ion-icecream</li>
+							<li class="ion-pizza" data-pack="default" data-tags="food, drink, eat">ion-pizza</li>
+							<li class="ion-power" data-pack="default" data-tags="on, off">ion-power</li>
+							<li class="ion-mouse" data-pack="default" data-tags="computer">ion-mouse</li>
+							<li class="ion-battery-full" data-pack="default" data-tags="">ion-battery-full</li>
+							<li class="ion-battery-half" data-pack="default" data-tags="">ion-battery-half</li>
+							<li class="ion-battery-low" data-pack="default" data-tags="">ion-battery-low</li>
+							<li class="ion-battery-empty" data-pack="default" data-tags="">ion-battery-empty</li>
+							<li class="ion-battery-charging" data-pack="default" data-tags="">ion-battery-charging</li>
+							<li class="ion-wifi" data-pack="default" data-tags="internet, connection">ion-wifi</li>
+							<li class="ion-bluetooth" data-pack="default" data-tags="connection, cloud">ion-bluetooth</li>
+							<li class="ion-calculator" data-pack="default" data-tags="math, arithmatic, numbers, addition, subtraction">ion-calculator</li>
+							<li class="ion-camera" data-pack="default" data-tags="photo">ion-camera</li>
+							<li class="ion-eye" data-pack="default" data-tags="view, see, creeper">ion-eye</li>
+							<li class="ion-eye-disabled" data-pack="default" data-tags="view, see, creeper">ion-eye-disabled</li>
+							<li class="ion-flash" data-pack="default" data-tags="lightning, weather, whether">ion-flash</li>
+							<li class="ion-flash-off" data-pack="default" data-tags="">ion-flash-off</li>
+							<li class="ion-qr-scanner" data-pack="default" data-tags="reader">ion-qr-scanner</li>
+							<li class="ion-image" data-pack="default" data-tags="photo">ion-image</li>
+							<li class="ion-images" data-pack="default" data-tags="photo">ion-images</li>
+							<li class="ion-wand" data-pack="default" data-tags="images, levels, light, dark, settings">ion-wand</li>
+							<li class="ion-contrast" data-pack="default" data-tags="images, levels, light, dark, settings">ion-contrast</li>
+							<li class="ion-aperture" data-pack="default" data-tags="images, levels, light, dark, settings">ion-aperture</li>
+							<li class="ion-crop" data-pack="default" data-tags="images, levels, light, dark, settings">ion-crop</li>
+							<li class="ion-easel" data-pack="default" data-tags="images, art, create, color">ion-easel</li>
+							<li class="ion-paintbrush" data-pack="default" data-tags="images, art, create, color">ion-paintbrush</li>
+							<li class="ion-paintbucket" data-pack="default" data-tags="images, art, create, color">ion-paintbucket</li>
+							<li class="ion-monitor" data-pack="default" data-tags="thunderbolt, screen">ion-monitor</li>
+							<li class="ion-laptop" data-pack="default" data-tags="macbook, apple, osx">ion-laptop</li>
+							<li class="ion-ipad" data-pack="default" data-tags="tablet, mobile, apple, retina, device">ion-ipad</li>
+							<li class="ion-iphone" data-pack="default" data-tags="smartphone, mobile, apple, retina, device">ion-iphone</li>
+							<li class="ion-ipod" data-pack="default" data-tags="music, player, apple, retina, device">ion-ipod</li>
+							<li class="ion-printer" data-pack="default" data-tags="paper">ion-printer</li>
+							<li class="ion-usb" data-pack="default" data-tags="digital, computer">ion-usb</li>
+							<li class="ion-outlet" data-pack="default" data-tags="digital, computer, electricity">ion-outlet</li>
+							<li class="ion-bug" data-pack="default" data-tags="develop, program, hacker, error">ion-bug</li>
+							<li class="ion-code" data-pack="default" data-tags="develop, program, hacker">ion-code</li>
+							<li class="ion-code-working" data-pack="default" data-tags="develop, program, hacker">ion-code-working</li>
+							<li class="ion-code-download" data-pack="default" data-tags="develop, program, hacker">ion-code-download</li>
+							<li class="ion-fork-repo" data-pack="default" data-tags="develop, program, hacker, github">ion-fork-repo</li>
+							<li class="ion-network" data-pack="default" data-tags="develop, program, hacker, github">ion-network</li>
+							<li class="ion-pull-request" data-pack="default" data-tags="develop, program, hacker, github">ion-pull-request</li>
+							<li class="ion-merge" data-pack="default" data-tags="develop, program, hacker, github">ion-merge</li>
+							<li class="ion-xbox" data-pack="default" data-tags="fun, games">ion-xbox</li>
+							<li class="ion-playstation" data-pack="default" data-tags="fun, games">ion-playstation</li>
+							<li class="ion-steam" data-pack="default" data-tags="fun, games">ion-steam</li>
+							<li class="ion-closed-captioning" data-pack="default" data-tags="movie, film, television">ion-closed-captioning</li>
+							<li class="ion-videocamera" data-pack="default" data-tags="movie, film, television">ion-videocamera</li>
+							<li class="ion-film-marker" data-pack="default" data-tags="film, cut, action">ion-film-marker</li>
+							<li class="ion-disc" data-pack="default" data-tags="cd, vinyl">ion-disc</li>
+							<li class="ion-headphone" data-pack="default" data-tags="music, earbuds, beats">ion-headphone</li>
+							<li class="ion-music-note" data-pack="default" data-tags="songs">ion-music-note</li>
+							<li class="ion-radio-waves" data-pack="default" data-tags="music, sound, speaker">ion-radio-waves</li>
+							<li class="ion-speakerphone" data-pack="default" data-tags="sound, speaker, loud, amplify">ion-speakerphone</li>
+							<li class="ion-mic-a" data-pack="default" data-tags="sound, talk, speaker">ion-mic-a</li>
+							<li class="ion-mic-b" data-pack="default" data-tags="sound, talk, speaker">ion-mic-b</li>
+							<li class="ion-mic-c" data-pack="default" data-tags="sound, talk, speaker">ion-mic-c</li>
+							<li class="ion-volume-high" data-pack="default" data-tags="sound, noise">ion-volume-high</li>
+							<li class="ion-volume-medium" data-pack="default" data-tags="sound">ion-volume-medium</li>
+							<li class="ion-volume-low" data-pack="default" data-tags="sound">ion-volume-low</li>
+							<li class="ion-volume-mute" data-pack="default" data-tags="sound">ion-volume-mute</li>
+							<li class="ion-levels" data-pack="default" data-tags="options, toggles, sound, mixer">ion-levels</li>
+							<li class="ion-play" data-pack="default" data-tags="music, watch, arrow, right">ion-play</li>
+							<li class="ion-pause" data-pack="default" data-tags="music, break, hold, freeze">ion-pause</li>
+							<li class="ion-stop" data-pack="default" data-tags="music, square, hold, freeze">ion-stop</li>
+							<li class="ion-record" data-pack="default" data-tags="music, circle">ion-record</li>
+							<li class="ion-skip-forward" data-pack="default" data-tags="music, next">ion-skip-forward</li>
+							<li class="ion-skip-backward" data-pack="default" data-tags="music, previous">ion-skip-backward</li>
+							<li class="ion-eject" data-pack="default" data-tags="music, dvd, remove">ion-eject</li>
+							<li class="ion-bag" data-pack="default" data-tags="shopping, price, cart, money, container, $">ion-bag</li>
+							<li class="ion-card" data-pack="default" data-tags="credit, price, debit, money, shopping, cash, dollars, $">ion-card</li>
+							<li class="ion-cash" data-pack="default" data-tags="credit, price, debit, money, shopping, dollars, $">ion-cash</li>
+							<li class="ion-pricetag" data-pack="default" data-tags="credit, debit, money, shopping, cash, dollars, $">ion-pricetag</li>
+							<li class="ion-pricetags" data-pack="default" data-tags="credit, debit, money, shopping, cash, dollars, $">ion-pricetags</li>
+							<li class="ion-thumbsup" data-pack="default" data-tags="like, fun, yes">ion-thumbsup</li>
+							<li class="ion-thumbsdown" data-pack="default" data-tags="dislike, boring, no">ion-thumbsdown</li>
+							<li class="ion-happy-outline" data-pack="default" data-tags="good, like, fun, yes">ion-happy-outline</li>
+							<li class="ion-happy" data-pack="default" data-tags="good, like, fun, yes">ion-happy</li>
+							<li class="ion-sad-outline" data-pack="default" data-tags="cry, bad, no">ion-sad-outline</li>
+							<li class="ion-sad" data-pack="default" data-tags="cry, bad, no">ion-sad</li>
+							<li class="ion-bowtie" data-pack="default" data-tags="tie, shirt, dress, clothing">ion-bowtie</li>
+							<li class="ion-tshirt-outline" data-pack="default" data-tags="tie, shirt, dress, clothing">ion-tshirt-outline</li>
+							<li class="ion-tshirt" data-pack="default" data-tags="tie, shirt, dress, clothing">ion-tshirt</li>
+							<li class="ion-trophy" data-pack="default" data-tags="competition, compete, win, lose, award">ion-trophy</li>
+							<li class="ion-podium" data-pack="default" data-tags="competition, compete, win, lose, award">ion-podium</li>
+							<li class="ion-ribbon-a" data-pack="default" data-tags="competition, compete, win, lose, award, trophy">ion-ribbon-a</li>
+							<li class="ion-ribbon-b" data-pack="default" data-tags="competition, compete, win, lose, award, trophy">ion-ribbon-b</li>
+							<li class="ion-university" data-pack="default" data-tags="graduate, education, school, tassle">ion-university</li>
+							<li class="ion-magnet" data-pack="default" data-tags="sticky, attraction">ion-magnet</li>
+							<li class="ion-beaker" data-pack="default" data-tags="mixture, potion, flask">ion-beaker</li>
+							<li class="ion-erlenmeyer-flask" data-pack="default" data-tags="mixture, potion, beaker, potion">ion-erlenmeyer-flask</li>
+							<li class="ion-egg" data-pack="default" data-tags="birth, twitter, bird, baby">ion-egg</li>
+							<li class="ion-earth" data-pack="default" data-tags="nature, globe, home, planet">ion-earth</li>
+							<li class="ion-planet" data-pack="default" data-tags="nature, globe, home, planet, space">ion-planet</li>
+							<li class="ion-lightbulb" data-pack="default" data-tags="idea, new, aha!">ion-lightbulb</li>
+							<li class="ion-cube" data-pack="default" data-tags="box, square, container">ion-cube</li>
+							<li class="ion-leaf" data-pack="default" data-tags="green, recycle, plant, nature">ion-leaf</li>
+							<li class="ion-waterdrop" data-pack="default" data-tags="nature, clean, recycle, fresh, wet, rain">ion-waterdrop</li>
+							<li class="ion-flame" data-pack="default" data-tags="fire, hot, heat">ion-flame</li>
+							<li class="ion-fireball" data-pack="default" data-tags="hot, heat">ion-fireball</li>
+							<li class="ion-bonfire" data-pack="default" data-tags="hot, heat">ion-bonfire</li>
+							<li class="ion-umbrella" data-pack="default" data-tags="wet, rain, dry, shelter">ion-umbrella</li>
+							<li class="ion-nuclear" data-pack="default" data-tags="danger, warning, hazard">ion-nuclear</li>
+							<li class="ion-no-smoking" data-pack="default" data-tags="danger, warning, cigarette, cancer">ion-no-smoking</li>
+							<li class="ion-thermometer" data-pack="default" data-tags="hot, cold, heat, temperature, mercury">ion-thermometer</li>
+							<li class="ion-speedometer" data-pack="default" data-tags="travel, accelerate">ion-speedometer</li>
+							<li class="ion-model-s" data-pack="default" data-tags="navigation, car, drive, transportation, tesla, sexy">ion-model-s</li>
+							<li class="ion-plane" data-pack="default" data-tags="fly, jet">ion-plane</li>
+							<li class="ion-jet" data-pack="default" data-tags="fly, plane">ion-jet</li>
+							<li class="ion-load-a" data-pack="default" data-tags="spinner, waiting, refresh">ion-load-a</li>
+							<li class="ion-load-b" data-pack="default" data-tags="spinner, waiting, refresh">ion-load-b</li>
+							<li class="ion-load-c" data-pack="default" data-tags="spinner, waiting, refresh">ion-load-c</li>
+							<li class="ion-load-d" data-pack="default" data-tags="spinner, waiting, refresh">ion-load-d</li>
+
+
+							<p><!-- end default icons pack --></p>
+
+
+							<li class="ion-ios-ionic-outline" data-pack="ios" data-tags="badass, framework, sexy">ion-ios-ionic-outline</li>
+							<li class="ion-ios-arrow-back" data-pack="ios" data-tags="chevron, left">ion-ios-arrow-back</li>
+							<li class="ion-ios-arrow-forward" data-pack="ios" data-tags="chevron, right">ion-ios-arrow-forward</li>
+							<li class="ion-ios-arrow-up" data-pack="ios" data-tags="chevron">ion-ios-arrow-up</li>
+							<li class="ion-ios-arrow-right" data-pack="ios" data-tags="chevron">ion-ios-arrow-right</li>
+							<li class="ion-ios-arrow-down" data-pack="ios" data-tags="chevron">ion-ios-arrow-down</li>
+							<li class="ion-ios-arrow-left" data-pack="ios" data-tags="chevron">ion-ios-arrow-left</li>
+							<li class="ion-ios-arrow-thin-up" data-pack="ios" data-tags="chevron">ion-ios-arrow-thin-up</li>
+							<li class="ion-ios-arrow-thin-right" data-pack="ios" data-tags="chevron">ion-ios-arrow-thin-right</li>
+							<li class="ion-ios-arrow-thin-down" data-pack="ios" data-tags="chevron">ion-ios-arrow-thin-down</li>
+							<li class="ion-ios-arrow-thin-left" data-pack="ios" data-tags="chevron">ion-ios-arrow-thin-left</li>
+							<li class="ion-ios-circle-filled" data-pack="ios" data-tags="checkmark, radio, dot, on, selected, button">ion-ios-circle-filled</li>
+							<li class="ion-ios-circle-outline" data-pack="ios" data-tags="checkmark, radio, dot, off, button">ion-ios-circle-outline</li>
+							<li class="ion-ios-checkmark-empty" data-pack="ios" data-tags="success, confirmed, on, finished, complete">ion-ios-checkmark-empty</li>
+							<li class="ion-ios-checkmark-outline" data-pack="ios" data-tags="success, confirmed, on, finished, complete">ion-ios-checkmark-outline</li>
+							<li class="ion-ios-checkmark" data-pack="ios" data-tags="success, confirmed, on, finished, complete">ion-ios-checkmark</li>
+							<li class="ion-ios-plus-empty" data-pack="ios" data-tags="add, include, new, invite, +">ion-ios-plus-empty</li>
+							<li class="ion-ios-plus-outline" data-pack="ios" data-tags="add, include, new, invite, +">ion-ios-plus-outline</li>
+							<li class="ion-ios-plus" data-pack="ios" data-tags="add, include, new, invite, +">ion-ios-plus</li>
+							<li class="ion-ios-close-empty" data-pack="ios" data-tags="delete, remove, trash, end, stop, x">ion-ios-close-empty</li>
+							<li class="ion-ios-close-outline" data-pack="ios" data-tags="delete, remove, trash, end, stop, x">ion-ios-close-outline</li>
+							<li class="ion-ios-close" data-pack="ios" data-tags="delete, remove, trash, end, stop, x">ion-ios-close</li>
+							<li class="ion-ios-minus-empty" data-pack="ios" data-tags="hide, remove, minimize, -">ion-ios-minus-empty</li>
+							<li class="ion-ios-minus-outline" data-pack="ios" data-tags="hide, remove, minimize, -">ion-ios-minus-outline</li>
+							<li class="ion-ios-minus" data-pack="ios" data-tags="hide, remove, minimize, -">ion-ios-minus</li>
+							<li class="ion-ios-information-empty" data-pack="ios" data-tags="help, question">ion-ios-information-empty</li>
+							<li class="ion-ios-information-outline" data-pack="ios" data-tags="help, question">ion-ios-information-outline</li>
+							<li class="ion-ios-information" data-pack="ios" data-tags="help, question">ion-ios-information</li>
+							<li class="ion-ios-help-empty" data-pack="ios" data-tags="question, information, ?">ion-ios-help-empty</li>
+							<li class="ion-ios-help-outline" data-pack="ios" data-tags="question, information, ?">ion-ios-help-outline</li>
+							<li class="ion-ios-help" data-pack="ios" data-tags="question, information, ?">ion-ios-help</li>
+							<li class="ion-ios-search" data-pack="ios" data-tags="find, seek, look, magnifying glass">ion-ios-search</li>
+							<li class="ion-ios-search-strong" data-pack="ios" data-tags="find, seek, look, magnifying glass">ion-ios-search-strong</li>
+							<li class="ion-ios-star" data-pack="ios" data-tags="favorite, rate">ion-ios-star</li>
+							<li class="ion-ios-star-half" data-pack="ios" data-tags="favorite, rate">ion-ios-star-half</li>
+							<li class="ion-ios-star-outline" data-pack="ios" data-tags="favorite, rate">ion-ios-star-outline</li>
+							<li class="ion-ios-heart" data-pack="ios" data-tags="love">ion-ios-heart</li>
+							<li class="ion-ios-heart-outline" data-pack="ios" data-tags="love">ion-ios-heart-outline</li>
+							<li class="ion-ios-more" data-pack="ios" data-tags="menu">ion-ios-more</li>
+							<li class="ion-ios-more-outline" data-pack="ios" data-tags="menu">ion-ios-more-outline</li>
+							<li class="ion-ios-home" data-pack="ios" data-tags="house">ion-ios-home</li>
+							<li class="ion-ios-home-outline" data-pack="ios" data-tags="house">ion-ios-home-outline</li>
+							<li class="ion-ios-cloud" data-pack="ios" data-tags="storage, weather, whether">ion-ios-cloud</li>
+							<li class="ion-ios-cloud-outline" data-pack="ios" data-tags="storage, weather, whether">ion-ios-cloud-outline</li>
+							<li class="ion-ios-cloud-upload" data-pack="ios" data-tags="storage">ion-ios-cloud-upload</li>
+							<li class="ion-ios-cloud-upload-outline" data-pack="ios" data-tags="storage">ion-ios-cloud-upload-outline</li>
+							<li class="ion-ios-cloud-download" data-pack="ios" data-tags="storage">ion-ios-cloud-download</li>
+							<li class="ion-ios-cloud-download-outline" data-pack="ios" data-tags="storage">ion-ios-cloud-download-outline</li>
+							<li class="ion-ios-upload" data-pack="ios" data-tags="share, import">ion-ios-upload</li>
+							<li class="ion-ios-upload-outline" data-pack="ios" data-tags="share, import">ion-ios-upload-outline</li>
+							<li class="ion-ios-download" data-pack="ios" data-tags="save, export">ion-ios-download</li>
+							<li class="ion-ios-download-outline" data-pack="ios" data-tags="save, export">ion-ios-download-outline</li>
+							<li class="ion-ios-refresh" data-pack="ios" data-tags="reload, renew, reset">ion-ios-refresh</li>
+							<li class="ion-ios-refresh-outline" data-pack="ios" data-tags="reload, renew, reset">ion-ios-refresh-outline</li>
+							<li class="ion-ios-refresh-empty" data-pack="ios" data-tags="reload, renew">ion-ios-refresh-empty</li>
+							<li class="ion-ios-reload" data-pack="ios" data-tags="renew, reset">ion-ios-reload</li>
+							<li class="ion-ios-loop-strong" data-pack="ios" data-tags="reload, renew, reset">ion-ios-loop-strong</li>
+							<li class="ion-ios-loop" data-pack="ios" data-tags="reload, renew, reset">ion-ios-loop</li>
+							<li class="ion-ios-bookmarks" data-pack="ios" data-tags="favorite">ion-ios-bookmarks</li>
+							<li class="ion-ios-bookmarks-outline" data-pack="ios" data-tags="favorite">ion-ios-bookmarks-outline</li>
+							<li class="ion-ios-book" data-pack="ios" data-tags="favorite, read, literature">ion-ios-book</li>
+							<li class="ion-ios-book-outline" data-pack="ios" data-tags="favorite, read, literature">ion-ios-book-outline</li>
+							<li class="ion-ios-flag" data-pack="ios" data-tags="marker, favorite">ion-ios-flag</li>
+							<li class="ion-ios-flag-outline" data-pack="ios" data-tags="marker, favorite">ion-ios-flag-outline</li>
+							<li class="ion-ios-glasses" data-pack="ios" data-tags="steve, reading, look, see">ion-ios-glasses</li>
+							<li class="ion-ios-glasses-outline" data-pack="ios" data-tags="steve, reading, look, see">ion-ios-glasses-outline</li>
+							<li class="ion-ios-browsers" data-pack="ios" data-tags="square">ion-ios-browsers</li>
+							<li class="ion-ios-browsers-outline" data-pack="ios" data-tags="square">ion-ios-browsers-outline</li>
+							<li class="ion-ios-at" data-pack="ios" data-tags="@">ion-ios-at</li>
+							<li class="ion-ios-at-outline" data-pack="ios" data-tags="@">ion-ios-at-outline</li>
+							<li class="ion-ios-pricetag" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-pricetag</li>
+							<li class="ion-ios-pricetag-outline" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-pricetag-outline</li>
+							<li class="ion-ios-pricetags" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-pricetags</li>
+							<li class="ion-ios-pricetags-outline" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-pricetags-outline</li>
+							<li class="ion-ios-cart" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-cart</li>
+							<li class="ion-ios-cart-outline" data-pack="ios" data-tags="shopping, money, items, commerce, $">ion-ios-cart-outline</li>
+							<li class="ion-ios-chatboxes" data-pack="ios" data-tags="talk">ion-ios-chatboxes</li>
+							<li class="ion-ios-chatboxes-outline" data-pack="ios" data-tags="talk">ion-ios-chatboxes-outline</li>
+							<li class="ion-ios-chatbubble" data-pack="ios" data-tags="talk">ion-ios-chatbubble</li>
+							<li class="ion-ios-chatbubble-outline" data-pack="ios" data-tags="talk">ion-ios-chatbubble-outline</li>
+							<li class="ion-ios-cog" data-pack="ios" data-tags="settings, gear, options">ion-ios-cog</li>
+							<li class="ion-ios-cog-outline" data-pack="ios" data-tags="settings, gear, options">ion-ios-cog-outline</li>
+							<li class="ion-ios-gear" data-pack="ios" data-tags="cog, settings, options">ion-ios-gear</li>
+							<li class="ion-ios-gear-outline" data-pack="ios" data-tags="cog, settings, options">ion-ios-gear-outline</li>
+							<li class="ion-ios-settings" data-pack="ios" data-tags="cog, settings, options">ion-ios-settings</li>
+							<li class="ion-ios-settings-strong" data-pack="ios" data-tags="cog, settings, options">ion-ios-settings-strong</li>
+							<li class="ion-ios-toggle" data-pack="ios" data-tags="settings, options, switch">ion-ios-toggle</li>
+							<li class="ion-ios-toggle-outline" data-pack="ios" data-tags="settings, options, switch">ion-ios-toggle-outline</li>
+							<li class="ion-ios-analytics" data-pack="ios" data-tags="metrics, track, data">ion-ios-analytics</li>
+							<li class="ion-ios-analytics-outline" data-pack="ios" data-tags="metrics, track, data">ion-ios-analytics-outline</li>
+							<li class="ion-ios-pie" data-pack="ios" data-tags="cog, settings, options">ion-ios-pie</li>
+							<li class="ion-ios-pie-outline" data-pack="ios" data-tags="cog, settings, options">ion-ios-pie-outline</li>
+							<li class="ion-ios-pulse" data-pack="ios" data-tags="live, hot, rate">ion-ios-pulse</li>
+							<li class="ion-ios-pulse-strong" data-pack="ios" data-tags="live, hot, rate">ion-ios-pulse-strong</li>
+							<li class="ion-ios-filing" data-pack="ios" data-tags="archive">ion-ios-filing</li>
+							<li class="ion-ios-filing-outline" data-pack="ios" data-tags="archive">ion-ios-filing-outline</li>
+							<li class="ion-ios-box" data-pack="ios" data-tags="archive">ion-ios-box</li>
+							<li class="ion-ios-box-outline" data-pack="ios" data-tags="archive">ion-ios-box-outline</li>
+							<li class="ion-ios-compose" data-pack="ios" data-tags="write, type, create">ion-ios-compose</li>
+							<li class="ion-ios-compose-outline" data-pack="ios" data-tags="write, type, create">ion-ios-compose-outline</li>
+							<li class="ion-ios-trash" data-pack="ios" data-tags="delete, remove, dispose, waste, basket, dump, kill">ion-ios-trash</li>
+							<li class="ion-ios-trash-outline" data-pack="ios" data-tags="delete, remove, dispose, waste, basket, dump, kill">ion-ios-trash-outline</li>
+							<li class="ion-ios-copy" data-pack="ios" data-tags="duplicate, paper">ion-ios-copy</li>
+							<li class="ion-ios-copy-outline" data-pack="ios" data-tags="duplicate, paper">ion-ios-copy-outline</li>
+							<li class="ion-ios-email" data-pack="ios" data-tags="snail, mail">ion-ios-email</li>
+							<li class="ion-ios-email-outline" data-pack="ios" data-tags="snail, mail">ion-ios-email-outline</li>
+							<li class="ion-ios-undo" data-pack="ios" data-tags="reply">ion-ios-undo</li>
+							<li class="ion-ios-undo-outline" data-pack="ios" data-tags="reply">ion-ios-undo-outline</li>
+							<li class="ion-ios-redo" data-pack="ios" data-tags="forward">ion-ios-redo</li>
+							<li class="ion-ios-redo-outline" data-pack="ios" data-tags="forward">ion-ios-redo-outline</li>
+							<li class="ion-ios-paperplane" data-pack="ios" data-tags="send">ion-ios-paperplane</li>
+							<li class="ion-ios-paperplane-outline" data-pack="ios" data-tags="send">ion-ios-paperplane-outline</li>
+							<li class="ion-ios-folder" data-pack="ios" data-tags="file">ion-ios-folder</li>
+							<li class="ion-ios-folder-outline" data-pack="ios" data-tags="file">ion-ios-folder-outline</li>
+							<li class="ion-ios-paper" data-pack="ios" data-tags="feed, paper">ion-ios-paper</li>
+							<li class="ion-ios-paper-outline" data-pack="ios" data-tags="feed, paper">ion-ios-paper-outline</li>
+							<li class="ion-ios-list" data-pack="ios" data-tags="todo, feed, paper">ion-ios-list</li>
+							<li class="ion-ios-list-outline" data-pack="ios" data-tags="todo, feed, paper">ion-ios-list-outline</li>
+							<li class="ion-ios-world" data-pack="ios" data-tags="globe, earth">ion-ios-world</li>
+							<li class="ion-ios-world-outline" data-pack="ios" data-tags="globe, earth">ion-ios-world-outline</li>
+							<li class="ion-ios-alarm" data-pack="ios" data-tags="wake, ring">ion-ios-alarm</li>
+							<li class="ion-ios-alarm-outline" data-pack="ios" data-tags="wake, ring">ion-ios-alarm-outline</li>
+							<li class="ion-ios-speedometer" data-pack="ios" data-tags="speed, drive, level">ion-ios-speedometer</li>
+							<li class="ion-ios-speedometer-outline" data-pack="ios" data-tags="speed, drive, level">ion-ios-speedometer-outline</li>
+							<li class="ion-ios-stopwatch" data-pack="ios" data-tags="time, speed">ion-ios-stopwatch</li>
+							<li class="ion-ios-stopwatch-outline" data-pack="ios" data-tags="time, speed">ion-ios-stopwatch-outline</li>
+							<li class="ion-ios-timer" data-pack="ios" data-tags="cooking, alarm, buzz">ion-ios-timer</li>
+							<li class="ion-ios-timer-outline" data-pack="ios" data-tags="cooking, alarm, buzz">ion-ios-timer-outline</li>
+							<li class="ion-ios-clock" data-pack="ios" data-tags="time, date, hours, minutes, seconds, watch">ion-ios-clock</li>
+							<li class="ion-ios-clock-outline" data-pack="ios" data-tags="time, date, hours, minutes, seconds, watch">ion-ios-clock-outline</li>
+							<li class="ion-ios-time" data-pack="ios" data-tags="clock, watch, hour, minute, second">ion-ios-time</li>
+							<li class="ion-ios-time-outline" data-pack="ios" data-tags="clock, watch, hour, minute, second">ion-ios-time-outline</li>
+							<li class="ion-ios-calendar" data-pack="ios" data-tags="date, time, month, year">ion-ios-calendar</li>
+							<li class="ion-ios-calendar-outline" data-pack="ios" data-tags="date, time, month, year">ion-ios-calendar-outline</li>
+							<li class="ion-ios-photos" data-pack="ios" data-tags="images, stills, square">ion-ios-photos</li>
+							<li class="ion-ios-photos-outline" data-pack="ios" data-tags="images, stills, square">ion-ios-photos-outline</li>
+							<li class="ion-ios-albums" data-pack="ios" data-tags="square, boxes, slides">ion-ios-albums</li>
+							<li class="ion-ios-albums-outline" data-pack="ios" data-tags="square, boxes, slides">ion-ios-albums-outline</li>
+							<li class="ion-ios-camera" data-pack="ios" data-tags="picture">ion-ios-camera</li>
+							<li class="ion-ios-camera-outline" data-pack="ios" data-tags="picture">ion-ios-camera-outline</li>
+							<li class="ion-ios-reverse-camera" data-pack="ios" data-tags="picture">ion-ios-reverse-camera</li>
+							<li class="ion-ios-reverse-camera-outline" data-pack="ios" data-tags="picture">ion-ios-reverse-camera-outline</li>
+							<li class="ion-ios-eye" data-pack="ios" data-tags="view, see, exposed, look">ion-ios-eye</li>
+							<li class="ion-ios-eye-outline" data-pack="ios" data-tags="view, see, exposed, look">ion-ios-eye-outline</li>
+							<li class="ion-ios-bolt" data-pack="ios" data-tags="flash, lightning">ion-ios-bolt</li>
+							<li class="ion-ios-bolt-outline" data-pack="ios" data-tags="flash, lightning">ion-ios-bolt-outline</li>
+							<li class="ion-ios-color-wand" data-pack="ios" data-tags="camera, picture, edit, magic">ion-ios-color-wand</li>
+							<li class="ion-ios-color-wand-outline" data-pack="ios" data-tags="camera, picture, edit, magic">ion-ios-color-wand-outline</li>
+							<li class="ion-ios-color-filter" data-pack="ios" data-tags="camera, picture">ion-ios-color-filter</li>
+							<li class="ion-ios-color-filter-outline" data-pack="ios" data-tags="camera, picture">ion-ios-color-filter-outline</li>
+							<li class="ion-ios-grid-view" data-pack="ios" data-tags="camera, picture">ion-ios-grid-view</li>
+							<li class="ion-ios-grid-view-outline" data-pack="ios" data-tags="camera, picture">ion-ios-grid-view-outline</li>
+							<li class="ion-ios-crop-strong" data-pack="ios" data-tags="camera, picture, edit">ion-ios-crop-strong</li>
+							<li class="ion-ios-crop" data-pack="ios" data-tags="camera, picture, edit">ion-ios-crop</li>
+							<li class="ion-ios-barcode" data-pack="ios" data-tags="reader, camera">ion-ios-barcode</li>
+							<li class="ion-ios-barcode-outline" data-pack="ios" data-tags="reader, camera">ion-ios-barcode-outline</li>
+							<li class="ion-ios-briefcase" data-pack="ios" data-tags="organize, folder">ion-ios-briefcase</li>
+							<li class="ion-ios-briefcase-outline" data-pack="ios" data-tags="organize, folder">ion-ios-briefcase-outline</li>
+							<li class="ion-ios-medkit" data-pack="ios" data-tags="health, case, first aid, sick, disease">ion-ios-medkit</li>
+							<li class="ion-ios-medkit-outline" data-pack="ios" data-tags="health, case, first aid, sick, disease">ion-ios-medkit-outline</li>
+							<li class="ion-ios-medical" data-pack="ios" data-tags="health, case, first aid, sick, disease">ion-ios-medical</li>
+							<li class="ion-ios-medical-outline" data-pack="ios" data-tags="health, case, first aid, sick, disease">ion-ios-medical-outline</li>
+							<li class="ion-ios-infinite" data-pack="ios" data-tags="forever, loop">ion-ios-infinite</li>
+							<li class="ion-ios-infinite-outline" data-pack="ios" data-tags="forever, loop">ion-ios-infinite-outline</li>
+							<li class="ion-ios-calculator" data-pack="ios" data-tags="math, arithmatic">ion-ios-calculator</li>
+							<li class="ion-ios-calculator-outline" data-pack="ios" data-tags="math, arithmatic">ion-ios-calculator-outline</li>
+							<li class="ion-ios-keypad" data-pack="ios" data-tags="type, grid, circle">ion-ios-keypad</li>
+							<li class="ion-ios-keypad-outline" data-pack="ios" data-tags="type, grid, circle">ion-ios-keypad-outline</li>
+							<li class="ion-ios-telephone" data-pack="ios" data-tags="oldschool, call">ion-ios-telephone</li>
+							<li class="ion-ios-telephone-outline" data-pack="ios" data-tags="oldschool, call">ion-ios-telephone-outline</li>
+							<li class="ion-ios-drag" data-pack="ios" data-tags="reorder, move, drag">ion-ios-drag</li>
+							<li class="ion-ios-location" data-pack="ios" data-tags="navigation, map, gps, pin">ion-ios-location</li>
+							<li class="ion-ios-location-outline" data-pack="ios" data-tags="navigation, map, gps, pin">ion-ios-location-outline</li>
+							<li class="ion-ios-navigate" data-pack="ios" data-tags="location, map, gps, pin">ion-ios-navigate</li>
+							<li class="ion-ios-navigate-outline" data-pack="ios" data-tags="location, map, gps, pin">ion-ios-navigate-outline</li>
+							<li class="ion-ios-locked" data-pack="ios" data-tags="security, padlock, safe">ion-ios-locked</li>
+							<li class="ion-ios-locked-outline" data-pack="ios" data-tags="security, padlock, safe">ion-ios-locked-outline</li>
+							<li class="ion-ios-unlocked" data-pack="ios" data-tags="security, padlock, safe">ion-ios-unlocked</li>
+							<li class="ion-ios-unlocked-outline" data-pack="ios" data-tags="security, padlock, safe">ion-ios-unlocked-outline</li>
+							<li class="ion-ios-monitor" data-pack="ios" data-tags="thunderbolt, display, screen">ion-ios-monitor</li>
+							<li class="ion-ios-monitor-outline" data-pack="ios" data-tags="thunderbolt, display, screen">ion-ios-monitor-outline</li>
+							<li class="ion-ios-printer" data-pack="ios" data-tags="paper">ion-ios-printer</li>
+							<li class="ion-ios-printer-outline" data-pack="ios" data-tags="paper">ion-ios-printer-outline</li>
+							<li class="ion-ios-game-controller-a" data-pack="ios" data-tags="gaming, nintendo, play">ion-ios-game-controller-a</li>
+							<li class="ion-ios-game-controller-a-outline" data-pack="ios" data-tags="gaming, nintendo, play">ion-ios-game-controller-a-outline</li>
+							<li class="ion-ios-game-controller-b" data-pack="ios" data-tags="gaming, nintendo, play">ion-ios-game-controller-b</li>
+							<li class="ion-ios-game-controller-b-outline" data-pack="ios" data-tags="gaming, nintendo, play">ion-ios-game-controller-b-outline</li>
+							<li class="ion-ios-americanfootball" data-pack="ios" data-tags="nfl, games, sports, fun, play">ion-ios-americanfootball</li>
+							<li class="ion-ios-americanfootball-outline" data-pack="ios" data-tags="nfl, games, sports, fun, play">ion-ios-americanfootball-outline</li>
+							<li class="ion-ios-baseball" data-pack="ios" data-tags="mlb, games, sports, fun, play">ion-ios-baseball</li>
+							<li class="ion-ios-baseball-outline" data-pack="ios" data-tags="mlb, games, sports, fun, play">ion-ios-baseball-outline</li>
+							<li class="ion-ios-basketball" data-pack="ios" data-tags="nba, games, sports, fun, play">ion-ios-basketball</li>
+							<li class="ion-ios-basketball-outline" data-pack="ios" data-tags="nba, games, sports, fun, play">ion-ios-basketball-outline</li>
+							<li class="ion-ios-tennisball" data-pack="ios" data-tags="games, sports, fun, play">ion-ios-tennisball</li>
+							<li class="ion-ios-tennisball-outline" data-pack="ios" data-tags="games, sports, fun, play">ion-ios-tennisball-outline</li>
+							<li class="ion-ios-football" data-pack="ios" data-tags="mls, soccer, games, sports, fun, play">ion-ios-football</li>
+							<li class="ion-ios-football-outline" data-pack="ios" data-tags="mls, soccer, games, sports, fun, play">ion-ios-football-outline</li>
+							<li class="ion-ios-body" data-pack="ios" data-tags="person, users, staff, head, human">ion-ios-body</li>
+							<li class="ion-ios-body-outline" data-pack="ios" data-tags="person, users, staff, head, human">ion-ios-body-outline</li>
+							<li class="ion-ios-person" data-pack="ios" data-tags="users, staff, head, human">ion-ios-person</li>
+							<li class="ion-ios-person-outline" data-pack="ios" data-tags="users, staff, head, human">ion-ios-person-outline</li>
+							<li class="ion-ios-personadd" data-pack="ios" data-tags="users, staff, head, human, new, invite">ion-ios-personadd</li>
+							<li class="ion-ios-personadd-outline" data-pack="ios" data-tags="users, staff, head, human, new, invite">ion-ios-personadd-outline</li>
+							<li class="ion-ios-people" data-pack="ios" data-tags="stalker, person, users, head, human">ion-ios-people</li>
+							<li class="ion-ios-people-outline" data-pack="ios" data-tags="stalker, person, users, head, human">ion-ios-people-outline</li>
+							<li class="ion-ios-musical-notes" data-pack="ios" data-tags="sound, noise, listening, play">ion-ios-musical-notes</li>
+							<li class="ion-ios-musical-note" data-pack="ios" data-tags="sound, noise, listening, play">ion-ios-musical-note</li>
+							<li class="ion-ios-bell" data-pack="ios" data-tags="right, noise, alarm, sound, music">ion-ios-bell</li>
+							<li class="ion-ios-bell-outline" data-pack="ios" data-tags="right, noise, alarm, sound, music">ion-ios-bell-outline</li>
+							<li class="ion-ios-mic" data-pack="ios" data-tags="sound, noise, speaker, talk">ion-ios-mic</li>
+							<li class="ion-ios-mic-outline" data-pack="ios" data-tags="sound, noise, speaker, talk">ion-ios-mic-outline</li>
+							<li class="ion-ios-mic-off" data-pack="ios" data-tags="sound, noise, speaker, talk">ion-ios-mic-off</li>
+							<li class="ion-ios-volume-high" data-pack="ios" data-tags="sound, noise, listen, music">ion-ios-volume-high</li>
+							<li class="ion-ios-volume-low" data-pack="ios" data-tags="sound, noise, listen, music">ion-ios-volume-low</li>
+							<li class="ion-ios-play" data-pack="ios" data-tags="music, watch, arrow, right">ion-ios-play</li>
+							<li class="ion-ios-play-outline" data-pack="ios" data-tags="music, watch, arrow, right">ion-ios-play-outline</li>
+							<li class="ion-ios-pause" data-pack="ios" data-tags="music, break, hold, freeze">ion-ios-pause</li>
+							<li class="ion-ios-pause-outline" data-pack="ios" data-tags="music, break, hold, freeze">ion-ios-pause-outline</li>
+							<li class="ion-ios-recording" data-pack="ios" data-tags="film, tape, voicemail">ion-ios-recording</li>
+							<li class="ion-ios-recording-outline" data-pack="ios" data-tags="film, tape, voicemail">ion-ios-recording-outline</li>
+							<li class="ion-ios-fastforward" data-pack="ios" data-tags="next, skip, jump">ion-ios-fastforward</li>
+							<li class="ion-ios-fastforward-outline" data-pack="ios" data-tags="next, skip, jump">ion-ios-fastforward-outline</li>
+							<li class="ion-ios-rewind" data-pack="ios" data-tags="music, previous, back">ion-ios-rewind</li>
+							<li class="ion-ios-rewind-outline" data-pack="ios" data-tags="music, previous, back">ion-ios-rewind-outline</li>
+							<li class="ion-ios-skipbackward" data-pack="ios" data-tags="music, previous">ion-ios-skipbackward</li>
+							<li class="ion-ios-skipbackward-outline" data-pack="ios" data-tags="music, previous">ion-ios-skipbackward-outline</li>
+							<li class="ion-ios-skipforward" data-pack="ios" data-tags="music, next">ion-ios-skipforward</li>
+							<li class="ion-ios-skipforward-outline" data-pack="ios" data-tags="music, next">ion-ios-skipforward-outline</li>
+							<li class="ion-ios-shuffle-strong" data-pack="ios" data-tags="music, next">ion-ios-shuffle-strong</li>
+							<li class="ion-ios-shuffle" data-pack="ios" data-tags="music, next">ion-ios-shuffle</li>
+							<li class="ion-ios-videocam" data-pack="ios" data-tags="film, movie, camera">ion-ios-videocam</li>
+							<li class="ion-ios-videocam-outline" data-pack="ios" data-tags="film, movie, camera">ion-ios-videocam-outline</li>
+							<li class="ion-ios-film" data-pack="ios" data-tags="film, movie, camera">ion-ios-film</li>
+							<li class="ion-ios-film-outline" data-pack="ios" data-tags="film, movie, camera">ion-ios-film-outline</li>
+							<li class="ion-ios-flask" data-pack="ios" data-tags="options, mixer, liquid">ion-ios-flask</li>
+							<li class="ion-ios-flask-outline" data-pack="ios" data-tags="options, mixer, liquid">ion-ios-flask-outline</li>
+							<li class="ion-ios-lightbulb" data-pack="ios" data-tags="idea, new, bright, aha!">ion-ios-lightbulb</li>
+							<li class="ion-ios-lightbulb-outline" data-pack="ios" data-tags="idea, new, bright, aha!">ion-ios-lightbulb-outline</li>
+							<li class="ion-ios-wineglass" data-pack="ios" data-tags="alcohol, drink, food, glass, drunk, cheers">ion-ios-wineglass</li>
+							<li class="ion-ios-wineglass-outline" data-pack="ios" data-tags="alcohol, drink, food, glass, drunk, cheers">ion-ios-wineglass-outline</li>
+							<li class="ion-ios-pint" data-pack="ios" data-tags="alcohol, drink, food, beer, drunk, cheers">ion-ios-pint</li>
+							<li class="ion-ios-pint-outline" data-pack="ios" data-tags="alcohol, drink, food, beer, drunk, cheers">ion-ios-pint-outline</li>
+							<li class="ion-ios-nutrition" data-pack="ios" data-tags="health, carrot, food">ion-ios-nutrition</li>
+							<li class="ion-ios-nutrition-outline" data-pack="ios" data-tags="health, carrot, food">ion-ios-nutrition-outline</li>
+							<li class="ion-ios-flower" data-pack="ios" data-tags="nature, spring, leaf, garden">ion-ios-flower</li>
+							<li class="ion-ios-flower-outline" data-pack="ios" data-tags="nature, spring, leaf, garden">ion-ios-flower-outline</li>
+							<li class="ion-ios-rose" data-pack="ios" data-tags="nature, spring, leaf, garden, flower">ion-ios-rose</li>
+							<li class="ion-ios-rose-outline" data-pack="ios" data-tags="nature, spring, leaf, garden, flower">ion-ios-rose-outline</li>
+							<li class="ion-ios-paw" data-pack="ios" data-tags="nature, animal, pet, outdoor, track">ion-ios-paw</li>
+							<li class="ion-ios-paw-outline" data-pack="ios" data-tags="nature, animal, pet, outdoor, track">ion-ios-paw-outline</li>
+							<li class="ion-ios-flame" data-pack="ios" data-tags="fire, hot, burn">ion-ios-flame</li>
+							<li class="ion-ios-flame-outline" data-pack="ios" data-tags="fire, hot, burn">ion-ios-flame-outline</li>
+							<li class="ion-ios-sunny" data-pack="ios" data-tags="weather, whether, light, sky">ion-ios-sunny</li>
+							<li class="ion-ios-sunny-outline" data-pack="ios" data-tags="weather, whether, light, sky">ion-ios-sunny-outline</li>
+							<li class="ion-ios-partlysunny" data-pack="ios" data-tags="light, weather, whether, cloudy">ion-ios-partlysunny</li>
+							<li class="ion-ios-partlysunny-outline" data-pack="ios" data-tags="light, weather, whether, cloudy">ion-ios-partlysunny-outline</li>
+							<li class="ion-ios-cloudy" data-pack="ios" data-tags="weather, whether, overcast">ion-ios-cloudy</li>
+							<li class="ion-ios-cloudy-outline" data-pack="ios" data-tags="weather, whether, overcast">ion-ios-cloudy-outline</li>
+							<li class="ion-ios-rainy" data-pack="ios" data-tags="whether, weather, water, cloud">ion-ios-rainy</li>
+							<li class="ion-ios-rainy-outline" data-pack="ios" data-tags="whether, weather, water, cloud">ion-ios-rainy-outline</li>
+							<li class="ion-ios-thunderstorm" data-pack="ios" data-tags="whether, weather, sky, lightning, rain, cloudy, overcast, storm">ion-ios-thunderstorm</li>
+							<li class="ion-ios-thunderstorm-outline" data-pack="ios" data-tags="whether, weather, sky, lightning, rain, cloudy, overcast, storm">ion-ios-thunderstorm-outline</li>
+							<li class="ion-ios-snowy" data-pack="ios" data-tags="cold, weather, whether, overcast">ion-ios-snowy</li>
+							<li class="ion-ios-moon" data-pack="ios" data-tags="sky, night, dark">ion-ios-moon</li>
+							<li class="ion-ios-moon-outline" data-pack="ios" data-tags="sky, night, dark">ion-ios-moon-outline</li>
+							<li class="ion-ios-cloudy-night" data-pack="ios" data-tags="weather, whether, overcast">ion-ios-cloudy-night</li>
+							<li class="ion-ios-cloudy-night-outline" data-pack="ios" data-tags="weather, whether, overcast">ion-ios-cloudy-night-outline</li>
+
+
+							<p><!-- end iOS 7-style icons pack --></p>
+
+
+							<li class="ion-android-arrow-up" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-up</li>
+							<li class="ion-android-arrow-forward" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-forward</li>
+							<li class="ion-android-arrow-down" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-down</li>
+							<li class="ion-android-arrow-back" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-back</li>
+							<li class="ion-android-arrow-dropup" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropup</li>
+							<li class="ion-android-arrow-dropup-circle" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropup-circle</li>
+							<li class="ion-android-arrow-dropright" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropright</li>
+							<li class="ion-android-arrow-dropright-circle" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropright-circle</li>
+							<li class="ion-android-arrow-dropdown" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropdown</li>
+							<li class="ion-android-arrow-dropdown-circle" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropdown-circle</li>
+							<li class="ion-android-arrow-dropleft" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropleft</li>
+							<li class="ion-android-arrow-dropleft-circle" data-pack="android" data-tags="chevron, navigation">ion-android-arrow-dropleft-circle</li>
+							<li class="ion-android-add" data-pack="android" data-tags="plus, include, invite">ion-android-add</li>
+							<li class="ion-android-add-circle" data-pack="android" data-tags="plus, include, invite">ion-android-add-circle</li>
+							<li class="ion-android-remove" data-pack="android" data-tags="minus, subtract, delete">ion-android-remove</li>
+							<li class="ion-android-remove-circle" data-pack="android" data-tags="minus, subtract, delete">ion-android-remove-circle</li>
+							<li class="ion-android-close" data-pack="android" data-tags="delete, remove">ion-android-close</li>
+							<li class="ion-android-cancel" data-pack="android" data-tags="delete, remove">ion-android-cancel</li>
+							<li class="ion-android-radio-button-off" data-pack="android" data-tags="">ion-android-radio-button-off</li>
+							<li class="ion-android-radio-button-on" data-pack="android" data-tags="">ion-android-radio-button-on</li>
+							<li class="ion-android-checkmark-circle" data-pack="android" data-tags="">ion-android-checkmark-circle</li>
+							<li class="ion-android-checkbox-outline-blank" data-pack="android" data-tags="">ion-android-checkbox-outline-blank</li>
+							<li class="ion-android-checkbox-outline" data-pack="android" data-tags="">ion-android-checkbox-outline</li>
+							<li class="ion-android-checkbox-blank" data-pack="android" data-tags="">ion-android-checkbox-blank</li>
+							<li class="ion-android-checkbox" data-pack="android" data-tags="">ion-android-checkbox</li>
+							<li class="ion-android-done" data-pack="android" data-tags="">ion-android-done</li>
+							<li class="ion-android-done-all" data-pack="android" data-tags="">ion-android-done-all</li>
+							<li class="ion-android-menu" data-pack="android" data-tags="">ion-android-menu</li>
+							<li class="ion-android-more-horizontal" data-pack="android" data-tags="options, menu">ion-android-more-horizontal</li>
+							<li class="ion-android-more-vertical" data-pack="android" data-tags="options, menu">ion-android-more-vertical</li>
+							<li class="ion-android-refresh" data-pack="android" data-tags="">ion-android-refresh</li>
+							<li class="ion-android-sync" data-pack="android" data-tags="">ion-android-sync</li>
+							<li class="ion-android-wifi" data-pack="android" data-tags="internet,connection, bars">ion-android-wifi</li>
+							<li class="ion-android-call" data-pack="android" data-tags="telephone">ion-android-call</li>
+							<li class="ion-android-apps" data-pack="android" data-tags="">ion-android-apps</li>
+							<li class="ion-android-settings" data-pack="android" data-tags="options">ion-android-settings</li>
+							<li class="ion-android-options" data-pack="android" data-tags="settings, mixer">ion-android-options</li>
+							<li class="ion-android-funnel" data-pack="android" data-tags="">ion-android-funnel</li>
+							<li class="ion-android-search" data-pack="android" data-tags="magnifying glass">ion-android-search</li>
+							<li class="ion-android-home" data-pack="android" data-tags="">ion-android-home</li>
+							<li class="ion-android-cloud-outline" data-pack="android" data-tags="">ion-android-cloud-outline</li>
+							<li class="ion-android-cloud" data-pack="android" data-tags="">ion-android-cloud</li>
+							<li class="ion-android-download" data-pack="android" data-tags="">ion-android-download</li>
+							<li class="ion-android-upload" data-pack="android" data-tags="">ion-android-upload</li>
+							<li class="ion-android-cloud-done" data-pack="android" data-tags="">ion-android-cloud-done</li>
+							<li class="ion-android-cloud-circle" data-pack="android" data-tags="">ion-android-cloud-circle</li>
+							<li class="ion-android-favorite-outline" data-pack="android" data-tags="favorite, like, rate">ion-android-favorite-outline</li>
+							<li class="ion-android-favorite" data-pack="android" data-tags="favorite, like, rate">ion-android-favorite</li>
+							<li class="ion-android-star-outline" data-pack="android" data-tags="favorite, like, rate">ion-android-star-outline</li>
+							<li class="ion-android-star-half" data-pack="android" data-tags="favorite, like, rate">ion-android-star-half</li>
+							<li class="ion-android-star" data-pack="android" data-tags="favorite, like, rate">ion-android-star</li>
+							<li class="ion-android-calendar" data-pack="android" data-tags="clock">ion-android-calendar</li>
+							<li class="ion-android-alarm-clock" data-pack="android" data-tags="clock">ion-android-alarm-clock</li>
+							<li class="ion-android-time" data-pack="android" data-tags="clock">ion-android-time</li>
+							<li class="ion-android-stopwatch" data-pack="android" data-tags="">ion-android-stopwatch</li>
+							<li class="ion-android-watch" data-pack="android" data-tags="">ion-android-watch</li>
+							<li class="ion-android-locate" data-pack="android" data-tags="">ion-android-locate</li>
+							<li class="ion-android-navigate" data-pack="android" data-tags="">ion-android-navigate</li>
+							<li class="ion-android-pin" data-pack="android" data-tags="">ion-android-pin</li>
+							<li class="ion-android-compass" data-pack="android" data-tags="">ion-android-compass</li>
+							<li class="ion-android-map" data-pack="android" data-tags="">ion-android-map</li>
+							<li class="ion-android-walk" data-pack="android" data-tags="">ion-android-walk</li>
+							<li class="ion-android-bicycle" data-pack="android" data-tags="move, bike, transportation, maps">ion-android-bicycle</li>
+							<li class="ion-android-car" data-pack="android" data-tags="">ion-android-car</li>
+							<li class="ion-android-bus" data-pack="android" data-tags="">ion-android-bus</li>
+							<li class="ion-android-subway" data-pack="android" data-tags="">ion-android-subway</li>
+							<li class="ion-android-train" data-pack="android" data-tags="">ion-android-train</li>
+							<li class="ion-android-boat" data-pack="android" data-tags="">ion-android-boat</li>
+							<li class="ion-android-plane" data-pack="android" data-tags="">ion-android-plane</li>
+							<li class="ion-android-restaurant" data-pack="android" data-tags="">ion-android-restaurant</li>
+							<li class="ion-android-bar" data-pack="android" data-tags="wine, drink, food, dinner">ion-android-bar</li>
+							<li class="ion-android-cart" data-pack="android" data-tags="">ion-android-cart</li>
+							<li class="ion-android-camera" data-pack="android" data-tags="">ion-android-camera</li>
+							<li class="ion-android-image" data-pack="android" data-tags="">ion-android-image</li>
+							<li class="ion-android-film" data-pack="android" data-tags="">ion-android-film</li>
+							<li class="ion-android-color-palette" data-pack="android" data-tags="">ion-android-color-palette</li>
+							<li class="ion-android-create" data-pack="android" data-tags="">ion-android-create</li>
+							<li class="ion-android-mail" data-pack="android" data-tags="">ion-android-mail</li>
+							<li class="ion-android-drafts" data-pack="android" data-tags="">ion-android-drafts</li>
+							<li class="ion-android-send" data-pack="android" data-tags="">ion-android-send</li>
+							<li class="ion-android-archive" data-pack="android" data-tags="">ion-android-archive</li>
+							<li class="ion-android-delete" data-pack="android" data-tags="">ion-android-delete</li>
+							<li class="ion-android-attach" data-pack="android" data-tags="">ion-android-attach</li>
+							<li class="ion-android-share" data-pack="android" data-tags="">ion-android-share</li>
+							<li class="ion-android-share-alt" data-pack="android" data-tags="">ion-android-share-alt</li>
+							<li class="ion-android-bookmark" data-pack="android" data-tags="">ion-android-bookmark</li>
+							<li class="ion-android-document" data-pack="android" data-tags="">ion-android-document</li>
+							<li class="ion-android-clipboard" data-pack="android" data-tags="">ion-android-clipboard</li>
+							<li class="ion-android-list" data-pack="android" data-tags="">ion-android-list</li>
+							<li class="ion-android-folder-open" data-pack="android" data-tags="">ion-android-folder-open</li>
+							<li class="ion-android-folder" data-pack="android" data-tags="">ion-android-folder</li>
+							<li class="ion-android-print" data-pack="android" data-tags="">ion-android-print</li>
+							<li class="ion-android-open" data-pack="android" data-tags="">ion-android-open</li>
+							<li class="ion-android-exit" data-pack="android" data-tags="">ion-android-exit</li>
+							<li class="ion-android-contract" data-pack="android" data-tags="">ion-android-contract</li>
+							<li class="ion-android-expand" data-pack="android" data-tags="">ion-android-expand</li>
+							<li class="ion-android-globe" data-pack="android" data-tags="">ion-android-globe</li>
+							<li class="ion-android-chat" data-pack="android" data-tags="talk, text">ion-android-chat</li>
+							<li class="ion-android-textsms" data-pack="android" data-tags="talk, text">ion-android-textsms</li>
+							<li class="ion-android-hangout" data-pack="android" data-tags="">ion-android-hangout</li>
+							<li class="ion-android-happy" data-pack="android" data-tags="">ion-android-happy</li>
+							<li class="ion-android-sad" data-pack="android" data-tags="">ion-android-sad</li>
+							<li class="ion-android-person" data-pack="android" data-tags="">ion-android-person</li>
+							<li class="ion-android-people" data-pack="android" data-tags="">ion-android-people</li>
+							<li class="ion-android-person-add" data-pack="android" data-tags="">ion-android-person-add</li>
+							<li class="ion-android-contact" data-pack="android" data-tags="">ion-android-contact</li>
+							<li class="ion-android-contacts" data-pack="android" data-tags="">ion-android-contacts</li>
+							<li class="ion-android-playstore" data-pack="android" data-tags="">ion-android-playstore</li>
+							<li class="ion-android-lock" data-pack="android" data-tags="">ion-android-lock</li>
+							<li class="ion-android-unlock" data-pack="android" data-tags="">ion-android-unlock</li>
+							<li class="ion-android-microphone" data-pack="android" data-tags="recorder, speak, noise, music, sound">ion-android-microphone</li>
+							<li class="ion-android-microphone-off" data-pack="android" data-tags="recorder, speak, noise, music, sound, mute">ion-android-microphone-off</li>
+							<li class="ion-android-notifications-none" data-pack="android" data-tags="">ion-android-notifications-none</li>
+							<li class="ion-android-notifications" data-pack="android" data-tags="">ion-android-notifications</li>
+							<li class="ion-android-notifications-off" data-pack="android" data-tags="">ion-android-notifications-off</li>
+							<li class="ion-android-volume-mute" data-pack="android" data-tags="">ion-android-volume-mute</li>
+							<li class="ion-android-volume-down" data-pack="android" data-tags="">ion-android-volume-down</li>
+							<li class="ion-android-volume-up" data-pack="android" data-tags="">ion-android-volume-up</li>
+							<li class="ion-android-volume-off" data-pack="android" data-tags="">ion-android-volume-off</li>
+							<li class="ion-android-hand" data-pack="android" data-tags="stop">ion-android-hand</li>
+							<li class="ion-android-desktop" data-pack="android" data-tags="">ion-android-desktop</li>
+							<li class="ion-android-laptop" data-pack="android" data-tags="">ion-android-laptop</li>
+							<li class="ion-android-phone-portrait" data-pack="android" data-tags="">ion-android-phone-portrait</li>
+							<li class="ion-android-phone-landscape" data-pack="android" data-tags="">ion-android-phone-landscape</li>
+							<li class="ion-android-bulb" data-pack="android" data-tags="">ion-android-bulb</li>
+							<li class="ion-android-sunny" data-pack="android" data-tags="">ion-android-sunny</li>
+							<li class="ion-android-alert" data-pack="android" data-tags="">ion-android-alert</li>
+							<li class="ion-android-warning" data-pack="android" data-tags="">ion-android-warning</li>
+
+
+							<p>
+							<!--
+
+							End Android-style icons pack.
+
+							Android-style icons originally built by Google’s [Material Design Icons](https://github.com/google/material-design-icons), used under [CC BY](http://creativecommons.org/licenses/by/4.0/) / Modified icons to fit ionicon’s grid from original.
+
+							-->
+							</p>
+
+
+							<li class="ion-social-twitter" data-pack="social" data-tags="follow, post, share">ion-social-twitter</li>
+							<li class="ion-social-twitter-outline" data-pack="social" data-tags="follow, post, share">ion-social-twitter-outline</li>
+							<li class="ion-social-facebook" data-pack="social" data-tags="like, post, share">ion-social-facebook</li>
+							<li class="ion-social-facebook-outline" data-pack="social" data-tags="like, post, share">ion-social-facebook-outline</li>
+							<li class="ion-social-googleplus" data-pack="social" data-tags="follow, post, share">ion-social-googleplus</li>
+							<li class="ion-social-googleplus-outline" data-pack="social" data-tags="follow, post, share">ion-social-googleplus-outline</li>
+							<li class="ion-social-google" data-pack="social" data-tags="follow, post, share">ion-social-google</li>
+							<li class="ion-social-google-outline" data-pack="social" data-tags="follow, post, share">ion-social-google-outline</li>
+							<li class="ion-social-dribbble" data-pack="social" data-tags="design">ion-social-dribbble</li>
+							<li class="ion-social-dribbble-outline" data-pack="social" data-tags="design">ion-social-dribbble-outline</li>
+							<li class="ion-social-octocat" data-pack="social" data-tags="code, github, fork, merge, clone">ion-social-octocat</li>
+							<li class="ion-social-github" data-pack="social" data-tags="code, fork, merge, clone">ion-social-github</li>
+							<li class="ion-social-github-outline" data-pack="social" data-tags="code, fork, merge, clone">ion-social-github-outline</li>
+							<li class="ion-social-instagram" data-pack="social" data-tags="photo, camera, facebook">ion-social-instagram</li>
+							<li class="ion-social-instagram-outline" data-pack="social" data-tags="photo, camera, facebook">ion-social-instagram-outline</li>
+							<li class="ion-social-whatsapp" data-pack="social" data-tags="text, sharing, private, facebook">ion-social-whatsapp</li>
+							<li class="ion-social-whatsapp-outline" data-pack="social" data-tags="text, sharing, private, facebook">ion-social-whatsapp-outline</li>
+							<li class="ion-social-snapchat" data-pack="social" data-tags="photos, app">ion-social-snapchat</li>
+							<li class="ion-social-snapchat-outline" data-pack="social" data-tags="photos, app">ion-social-snapchat-outline</li>
+							<li class="ion-social-foursquare" data-pack="social" data-tags="checkin">ion-social-foursquare</li>
+							<li class="ion-social-foursquare-outline" data-pack="social" data-tags="checkin">ion-social-foursquare-outline</li>
+							<li class="ion-social-pinterest" data-pack="social" data-tags="social">ion-social-pinterest</li>
+							<li class="ion-social-pinterest-outline" data-pack="social" data-tags="social">ion-social-pinterest-outline</li>
+							<li class="ion-social-rss" data-pack="social" data-tags="blogging">ion-social-rss</li>
+							<li class="ion-social-rss-outline" data-pack="social" data-tags="blogging">ion-social-rss-outline</li>
+							<li class="ion-social-tumblr" data-pack="social" data-tags="blogging">ion-social-tumblr</li>
+							<li class="ion-social-tumblr-outline" data-pack="social" data-tags="blogging">ion-social-tumblr-outline</li>
+							<li class="ion-social-wordpress" data-pack="social" data-tags="blogging">ion-social-wordpress</li>
+							<li class="ion-social-wordpress-outline" data-pack="social" data-tags="blogging">ion-social-wordpress-outline</li>
+							<li class="ion-social-reddit" data-pack="social" data-tags="news, upvotes, karma">ion-social-reddit</li>
+							<li class="ion-social-reddit-outline" data-pack="social" data-tags="news, upvotes, karma">ion-social-reddit-outline</li>
+							<li class="ion-social-hackernews" data-pack="social" data-tags="discuss, upvotes, karma">ion-social-hackernews</li>
+							<li class="ion-social-hackernews-outline" data-pack="social" data-tags="discuss, upvotes, karma">ion-social-hackernews-outline</li>
+							<li class="ion-social-designernews" data-pack="social" data-tags="design, post">ion-social-designernews</li>
+							<li class="ion-social-designernews-outline" data-pack="social" data-tags="design, post">ion-social-designernews-outline</li>
+							<li class="ion-social-yahoo" data-pack="social" data-tags="">ion-social-yahoo</li>
+							<li class="ion-social-yahoo-outline" data-pack="social" data-tags="">ion-social-yahoo-outline</li>
+							<li class="ion-social-buffer" data-pack="social" data-tags="share">ion-social-buffer</li>
+							<li class="ion-social-buffer-outline" data-pack="social" data-tags="share">ion-social-buffer-outline</li>
+							<li class="ion-social-skype" data-pack="social" data-tags="call">ion-social-skype</li>
+							<li class="ion-social-skype-outline" data-pack="social" data-tags="call">ion-social-skype-outline</li>
+							<li class="ion-social-linkedin" data-pack="social" data-tags="connect">ion-social-linkedin</li>
+							<li class="ion-social-linkedin-outline" data-pack="social" data-tags="connect">ion-social-linkedin-outline</li>
+							<li class="ion-social-vimeo" data-pack="social" data-tags="video, watch, share, view">ion-social-vimeo</li>
+							<li class="ion-social-vimeo-outline" data-pack="social" data-tags="video, watch, share, view">ion-social-vimeo-outline</li>
+							<li class="ion-social-twitch" data-pack="social" data-tags="gaming, games, live, streaming, video, watch, share, view">ion-social-twitch</li>
+							<li class="ion-social-twitch-outline" data-pack="social" data-tags="gaming, games, live, streaming, video, watch, share, view">ion-social-twitch-outline</li>
+							<li class="ion-social-youtube" data-pack="social" data-tags="video, watch, share, view">ion-social-youtube</li>
+							<li class="ion-social-youtube-outline" data-pack="social" data-tags="video, watch, share, view">ion-social-youtube-outline</li>
+							<li class="ion-social-dropbox" data-pack="social" data-tags="upload">ion-social-dropbox</li>
+							<li class="ion-social-dropbox-outline" data-pack="social" data-tags="upload">ion-social-dropbox-outline</li>
+							<li class="ion-social-apple" data-pack="social" data-tags="mac, mobile">ion-social-apple</li>
+							<li class="ion-social-apple-outline" data-pack="social" data-tags="mac, mobile">ion-social-apple-outline</li>
+							<li class="ion-social-android" data-pack="social" data-tags="mobile">ion-social-android</li>
+							<li class="ion-social-android-outline" data-pack="social" data-tags="mobile">ion-social-android-outline</li>
+							<li class="ion-social-windows" data-pack="social" data-tags="pc">ion-social-windows</li>
+							<li class="ion-social-windows-outline" data-pack="social" data-tags="pc">ion-social-windows-outline</li>
+							<li class="ion-social-html5" data-pack="social" data-tags="code, html, css, js, developer">ion-social-html5</li>
+							<li class="ion-social-html5-outline" data-pack="social" data-tags="code, html, css, js, developer">ion-social-html5-outline</li>
+							<li class="ion-social-css3" data-pack="social" data-tags="code, html, css, js, developer">ion-social-css3</li>
+							<li class="ion-social-css3-outline" data-pack="social" data-tags="code, html, css, js, developer">ion-social-css3-outline</li>
+							<li class="ion-social-javascript" data-pack="social" data-tags="code, html, css, js, developer">ion-social-javascript</li>
+							<li class="ion-social-javascript-outline" data-pack="social" data-tags="code, html, css, js, developer">ion-social-javascript-outline</li>
+							<li class="ion-social-angular" data-pack="social" data-tags="code, mobile, js, angularjs, ionic">ion-social-angular</li>
+							<li class="ion-social-angular-outline" data-pack="social" data-tags="code, mobile, js, angularjs, ionic">ion-social-angular-outline</li>
+							<li class="ion-social-nodejs" data-pack="social" data-tags="code, js, javascript, developer">ion-social-nodejs</li>
+							<li class="ion-social-sass" data-pack="social" data-tags="code, css">ion-social-sass</li>
+							<li class="ion-social-python" data-pack="social" data-tags="code">ion-social-python</li>
+							<li class="ion-social-chrome" data-pack="social" data-tags="code, mobile, js, angularjs, ionic">ion-social-chrome</li>
+							<li class="ion-social-chrome-outline" data-pack="social" data-tags="code, mobile, js, angularjs, ionic">ion-social-chrome-outline</li>
+							<li class="ion-social-codepen" data-pack="social" data-tags="testing, js, developer">ion-social-codepen</li>
+							<li class="ion-social-codepen-outline" data-pack="social" data-tags="testing, js, developer">ion-social-codepen-outline</li>
+							<li class="ion-social-markdown" data-pack="social" data-tags="code, testing, text, developer">ion-social-markdown</li>
+							<li class="ion-social-tux" data-pack="social" data-tags="code, linux, opensource">ion-social-tux</li>
+							<li class="ion-social-freebsd-devil" data-pack="social" data-tags="code, opensource, unix">ion-social-freebsd-devil</li>
+							<li class="ion-social-usd" data-pack="social" data-tags="currency, trade, money, cash">ion-social-usd</li>
+							<li class="ion-social-usd-outline" data-pack="social" data-tags="currency, trade, money, cash">ion-social-usd-outline</li>
+							<li class="ion-social-bitcoin" data-pack="social" data-tags="currency, trade, money">ion-social-bitcoin</li>
+							<li class="ion-social-bitcoin-outline" data-pack="social" data-tags="currency, trade, money">ion-social-bitcoin-outline</li>
+							<li class="ion-social-yen" data-pack="social" data-tags="currency, trade, money, japanese">ion-social-yen</li>
+							<li class="ion-social-yen-outline" data-pack="social" data-tags="currency, trade, money, japanese">ion-social-yen-outline</li>
+							<li class="ion-social-euro" data-pack="social" data-tags="currency, trade, money, europe">ion-social-euro</li>
+							<li class="ion-social-euro-outline" data-pack="social" data-tags="currency, trade, money, europe">ion-social-euro-outline</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- End Main Content -->
+
+	<!-- Script -->
+	<script type="text/javascript" src="../libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>

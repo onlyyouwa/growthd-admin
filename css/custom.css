@@ -168,6 +168,14 @@ ul.color-set > li div {
   border-radius: 3px;
   border: none;
 }
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}
 .btn.btn-default {
   color: #333;
   background-color: #ddd;
@@ -401,6 +409,27 @@ header .form-control:focus {
 }
 .dropdown-menu.dropdown-list > li.new a {
   background-color: #fffbea;
+}
+/* Icons */
+.fontawesome-icon-list > div {
+  margin-bottom: 5px;
+}
+.fontawesome-icon-list i {
+  width: 15px;
+  margin-right: 10px;
+}
+#icons {
+  list-style: none;
+  padding-left: 0px;
+}
+#icons > li {
+  display: inline-block;
+  width: 24.5%;
+  margin-bottom: 5px;
+}
+#icons > li:before {
+  width: 20px;
+  margin-right: 5px;
 }
 /* Theme */
 .theme-default {
