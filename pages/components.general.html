@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Growthd Admin v1</title>
+
+	<!-- Utf-8 Chartset -->
+	<meta charset="utf-8">
+
+	<!-- Responsive layout -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Import Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Style -->	
+	<link rel="stylesheet" type="text/css" href="../libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/Ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/custom.css">
+
+</head>
+<body class="theme-default">
+
+	<header>
+		<!-- Top Navbar -->
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-toggle" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">G-Admin v1</a>
+				</div>
+
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell-o"></i>
+								<span class="bubble bubble-danger">2</span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="new">
+									<a href="#">
+										<h5>Notification #1</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li class="new">
+									<a href="#">
+										<h5>Notification #2</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #3</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #4</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Show all notifications
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope-o"></i>
+								<span class="bubble bubble-warning bubble-noitem"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="empty">
+									No new messages
+								</li>
+								<li>
+									<a href="#">
+										Show all messages
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown has-image">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../img/default-user.png" alt=""> Admin<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Setting</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Log out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling
+				<div class="collapse navbar-collapse" id="navbar-toggle">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+				</div> /.navbar-collapse --> 
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- Main Menu -->
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="../index.html">
+						<div><i class="ion-ios-speedometer-outline"></i></div>
+						Dashboard
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-photos-outline"></i></div>
+						Pages <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="blank.html">Blank</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a href="404.html">404 Error</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-monitor-outline"></i></div>
+						Components <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="components.general.html">General</a></li>
+						<li><a href="components.button.html">Buttons</a></li>
+						<li><a href="components.icons.html">Icons</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="forms.html">
+						<div><i class="ion-ios-compose-outline"></i></div>
+						Forms
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="tables.normal-table.html">
+						<div><i class="ion-ios-grid-view-outline"></i></div>
+						Tables
+					</a>
+					<!-- <ul class="dropdown-menu">
+						<li><a href="#">Normal tables</a></li>
+						<li><a href="#">Data tables</a></li>
+					</ul> -->
+				</li>
+			</ul>
+		</div>
+		<!-- End Main Menu -->
+	</header>
+
+	<!-- Main Content -->
+	<div class="main-content container">
+
+		<div class="content-header">
+			<h2 class="color-blue">Colors</h2>
+			<ol class="breadcrumb">
+				<li><a href="#">Components</a></li>
+				<li class="active">General</li>
+			</ol>
+		</div>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box">
+					<div class="box-header">
+						<h4>Colors set</h4>
+					</div>
+					<div class="box-body">
+						<ul class="color-set">
+							<li><div style="background-color: #3498db">#3498db<br>Primary Color</div><div style="background-color: #2980b9">#2980b9<br>Dark Primary Color</div></li><!--
+							--><li><div style="background-color: #00bcd4">#00bcd4<br>Info Color</div><div style="background-color: #02aabf">#02aabf<br>Dark Info Color</div></li><!--
+							--><li><div style="background-color: #2ecc71">#2ecc71<br>Success Color</div><div style="background-color: #27ae60">#27ae60<br>Dark Success Color</div></li><!-- remove space -> prevent inline list error width
+							--><li><div style="background-color: #f1c40f">#f1c40f<br>Warning Color</div><div style="background-color: #f39c12">#f39c12<br>Dark Warning Color</div></li><!--
+							--><li><div style="background-color: #e74c3c">#e74c3c<br>Danger Color</div><div style="background-color: #c0392b">#c0392b<br>Dark Danger Color</div></li>
+						</ul>
+						Some flat colors from here >> <a href="http://flatuicolors.com/" rel="no-follow">Flatuicolors.com</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<h2 class="color-blue">Alerts & Progress bars</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Alerts</h4>
+					</div>
+					<div class="box-body">
+						<div class="alert alert-success alert-dismissible" role="alert">Success!! You're doing great. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-info alert-dismissible" role="alert">Hello!! How're you today? <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-warning alert-dismissible" role="alert">Warning!! You're in dangerous area. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+						<div class="alert alert-danger alert-dismissible" role="alert">Whoops!! Something went wrong. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Progress bars</h4>
+					</div>
+					<div class="box-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+								<span class="sr-only">40% Complete (success)</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+								<span class="sr-only">20% Complete</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+								<span class="sr-only">60% Complete (warning)</span>
+							</div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								<span class="sr-only">80% Complete (danger)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<h2 class="color-blue">Typography</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Heading</h4>
+					</div>
+					<div class="box-body">
+						<h1>&lt;h1&gt; Bootstrap heading</h1>
+						<h2>&lt;h2&gt; Bootstrap heading</h2>
+						<h3>&lt;h3&gt; Bootstrap heading</h3>
+						<h4>&lt;h4&gt; Bootstrap heading</h4>
+						<h5>&lt;h5&gt; Bootstrap heading</h5>
+						<h6>&lt;h6&gt; Bootstrap heading</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>List</h4>
+					</div>
+					<div class="box-body">
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								<ul>
+									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+									<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+								</ul>
+							</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Vertical Description</h4>
+					</div>
+					<div class="box-body">
+						<dl>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Horizontal Description</h4>
+					</div>
+					<div class="box-body">
+						<dl class="dl-horizontal">
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+							<dt>Sed do eiusmod</dt>
+							<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+
+		<h2 class="color-blue">Boxing</h2>
+		<!-- row -->
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<div class="box-header">
+						<h4>Box header</h4>
+						&lt;div class="box-header"&gt;<br>
+							&nbsp;&nbsp;&nbsp;&lt;h4&gt;Box header&lt;/h4&gt;<br>
+						&lt;/div&gt;
+					</div>
+					<div class="box-body">
+						&lt;div class="box-body"&gt;<br>
+							&nbsp;&nbsp;&nbsp;Box Content<br>
+						&lt;/div&gt;
+					</div>
+					<div class="box-footer">
+						&lt;div class="box-footer"&gt;<br>
+							&nbsp;&nbsp;&nbsp;Box Footer<br>
+						&lt;/div&gt;
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End row -->
+	</div>
+	<!-- End Main Content -->
+
+	<!-- Script -->
+	<script type="text/javascript" src="../libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>

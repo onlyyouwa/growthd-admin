@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Growthd Admin v1</title>
+
+	<!-- Utf-8 Chartset -->
+	<meta charset="utf-8">
+
+	<!-- Responsive layout -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Import Font -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Style -->	
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/Ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+<body class="theme-default">
+
+	<header>
+		<!-- Top Navbar -->
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-toggle" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">G-Admin v1</a>
+				</div>
+
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell-o"></i>
+								<span class="bubble bubble-danger">2</span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="new">
+									<a href="#">
+										<h5>Notification #1</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li class="new">
+									<a href="#">
+										<h5>Notification #2</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #3</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5>Notification #4</h5>
+										<span class="dropdown-info">Someone told you something.</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Show all notifications
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope-o"></i>
+								<span class="bubble bubble-warning bubble-noitem"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-list">
+								<li class="empty">
+									No new messages
+								</li>
+								<li>
+									<a href="#">
+										Show all messages
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown has-image">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/default-user.png" alt=""> Admin<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Setting</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Log out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling
+				<div class="collapse navbar-collapse" id="navbar-toggle">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+				</div> /.navbar-collapse --> 
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- Main Menu -->
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="index.html" class="active">
+						<div><i class="ion-ios-speedometer-outline"></i></div>
+						Dashboard
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-photos-outline"></i></div>
+						Pages <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="pages/blank.html">Blank</a></li>
+						<li><a href="pages/login.html">Login</a></li>
+						<li><a href="pages/register.html">Register</a></li>
+						<li><a href="pages/404.html">404 Error</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div><i class="ion-ios-monitor-outline"></i></div>
+						Components <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="pages/components.general.html">General</a></li>
+						<li><a href="pages/components.button.html">Buttons</a></li>
+						<li><a href="pages/components.icons.html">Icons</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="pages/forms.html">
+						<div><i class="ion-ios-compose-outline"></i></div>
+						Forms
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="pages/tables.normal-table.html">
+						<div><i class="ion-ios-grid-view-outline"></i></div>
+						Tables
+					</a>
+					<!-- <ul class="dropdown-menu">
+						<li><a href="#">Normal tables</a></li>
+						<li><a href="#">Data tables</a></li>
+					</ul> -->
+				</li>
+			</ul>
+		</div>
+		<!-- End Main Menu -->
+	</header>
+
+	<!-- Main Content -->
+	<div class="main-content container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="box box-stats">
+					<h2>23,010.00</h2>
+					<span>Budgets</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="box box-stats">
+					<h2>
+						477
+					</h2>
+					<span>Persons</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="box box-stats">
+					<h2>120</h2>
+					<span>Sales</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="box box-stats">
+					<h2>200,000+</h2>
+					<span>Downloads</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Main Content -->
+
+	<!-- Script -->
+	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
